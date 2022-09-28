@@ -43,4 +43,7 @@ print(10*2)
 
 >>> len('Help') # length - dá o comprimento da String
 4
+
+>>> "a-maria-e-o-manel".split('-')
+['a', 'maria', 'e', 'o', 'manel']
 ```
