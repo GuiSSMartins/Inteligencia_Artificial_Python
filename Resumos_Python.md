@@ -1,6 +1,6 @@
 # Resumos PYTHON (finalmente, demoraste muito a ficar atual UMinho)
 
-### COmentários, #
+### Comentários ##
 
 ## Tópicos básicos de programação
 
