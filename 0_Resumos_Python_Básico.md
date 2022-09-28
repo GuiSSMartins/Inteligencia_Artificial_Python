@@ -3,7 +3,7 @@
 
 ### Comentários
 ```python
-# A revolução no mundo da progarmação
+# A revolução no mundo da programação
 ```
 
 ## Tópicos básicos de programação
@@ -83,3 +83,25 @@ print(10*2)
 
 >>> frutas.reverse # reverter os elementos da lista
 ```
+
+### Tuplos
+Igual a uma lista mas que é imutável a partir do momento em que é criado, i.e., não pode mudar. 
+
+__ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as listas são-no por __parêntesis retos []__ (ou mesmo sem parenteses!!!!!).
+
+```python
+>>> par = (3,5)
+>>> par[0]
+3
+>>>outro_par = 5,5 # Na verdade, nem precisamos de parêntesis.
+>>>outro_par
+(5, 5)
+
+>>>x,y = par
+>>>x
+3
+>>>y
+5
+```
+
+### Conjuntos (da Matemática Discreta)
