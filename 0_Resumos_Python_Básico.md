@@ -61,4 +61,15 @@ print(10*2)
 'banana'
 >>> frutas[-2]
 'pêra'
+
+# obter o último elemento de uma lista depois de ser removido
+>>> frutas.pop()
+'banana'
+>>> frutas
+['maçã', 'laranja', 'pêra']
+
+# adicionar coisas no FINAL da lista
+>>> frutas.append('uvas')
+>>> frutas
+['maçã', 'laranja', 'pêra', 'uvas']
 ```
