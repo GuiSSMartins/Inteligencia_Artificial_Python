@@ -13,7 +13,7 @@
 - __Concatenar Strings__: 'inteligencia ' + 'artificial' = 'inteligencia artificial'
 - __Inteiros e Reais__: 12,-34, 22342, 13435.24, -2454 ** 0.5
 - __Operações matemáticas__: +, -, *, /, % (resto da divisão inteira), ** (potencia)
-- __Valores & Operadores Lógicos__: True, False;     ==, !=, &&, ||
+- __Valores & Operadores Lógicos__: True, False;     ==, !=;      not, and, or
 
 ```python
 # Escrever coisas no ecrã
@@ -24,10 +24,13 @@ print(10*2)
 ```python
 >>> "artificial" + " " + "intelligence"
 'artificial intelligence'
+
 >>> 'artificial'.upper()
 'ARTIFICIAL'
+
 >>> 'HELP'.lower()
 'help'
+
 >>> len('Help') # length - dá o comprimento da String
 4
 ```
