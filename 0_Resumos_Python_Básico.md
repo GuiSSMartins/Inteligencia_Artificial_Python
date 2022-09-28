@@ -72,4 +72,12 @@ print(10*2)
 >>> frutas.append('uvas')
 >>> frutas
 ['maçã', 'laranja', 'pêra', 'uvas']
+
+# Uso de intervalos de indexação
+>>> frutas[0:2]
+['maçã', 'laranja']
+>>> frutas[:3]
+['maçã', 'laranja', 'ananás']
+>>> frutas[2:]
+['ananás', 'uvas']
 ```
