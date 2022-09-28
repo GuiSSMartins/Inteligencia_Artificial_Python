@@ -28,8 +28,13 @@ True
 print(10*2) 
 ```
 
+# AVISO - Funções
+Nem todas as funções modificam o conteúdo de uma variável. Mostram apenas um resultado!!!!
+Se estiver entre parenteses 
+
 ### Funções uteis para _Strings_
 ```python
+# Concatenação de Strings
 >>> "artificial" + " " + "intelligence"
 'artificial intelligence'
 
