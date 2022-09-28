@@ -80,4 +80,6 @@ print(10*2)
 ['maçã', 'laranja', 'ananás']
 >>> frutas[2:]
 ['ananás', 'uvas']
+
+>>> frutas.reverse # reverter os elementos da lista
 ```
