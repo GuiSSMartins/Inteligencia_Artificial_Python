@@ -1,4 +1,4 @@
-# Resumos PROLOG (como programar isto tudo... talvez)
+# Resumos PYTHON (finalmente, demoraste muito a ficar atual UMinho)
 
 ## Programação em LÓGICA
 
