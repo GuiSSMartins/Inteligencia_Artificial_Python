@@ -93,15 +93,24 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 >>> par = (3,5)
 >>> par[0]
 3
->>>outro_par = 5,5 # Na verdade, nem precisamos de parêntesis.
->>>outro_par
+>>> outro_par = 5,5 # Na verdade, nem precisamos de parêntesis.
+>>> outro_par
 (5, 5)
 
->>>x,y = par
->>>x
+>>> x,y = par
+>>> x
 3
->>>y
+>>> y
 5
 ```
 
 ### Conjuntos (da Matemática Discreta)
+É uma lista _não ordenada_ __sem elementos duplicados__.
+
+```python
+# COnversão Lista -> Conjunto (função set())
+>>> formas = ['círculo','quadrado','triângulo','círculo']
+>>> formas = set(formas)
+>>> formas
+{'triângulo', 'quadrado', 'círculo'}
+```
