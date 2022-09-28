@@ -47,3 +47,15 @@ print(10*2)
 >>> "a-maria-e-o-manel".split('-')
 ['a', 'maria', 'e', 'o', 'manel']
 ```
+
+## Estruturas de Dados
+
+### Listas
+```python
+>>> frutas = ['maçã','laranja','pêra','banana']
+>>> frutas[0]
+'maçã'
+>>> outrasFrutas = ['kivi','morangos']
+>>> frutas + outrasFrutas # + para concatenar listas
+['maçã', 'laranja', 'pêra', 'banana', 'kivi', 'morangos']
+```
