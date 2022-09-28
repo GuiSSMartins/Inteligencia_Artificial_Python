@@ -17,8 +17,7 @@
 - __Print__: 
 
 ```python
-x=10
-print(x*2) 
+print(10*2) 
 ```
 
 
