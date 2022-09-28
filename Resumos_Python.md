@@ -13,7 +13,7 @@
 - __Concatenar Strings__: 'inteligencia ' + 'artificial' = 'inteligencia artificial'
 - __Inteiros e Reais__: 12,-34, 22342, 13435.24, -2454 ** 0.5
 - __Operações matemáticas__: +, -, *, /, % (resto da divisão inteira), ** (potencia)
-- __Valores Lógicos__: &&, ||
+- __Valores & Operadores Lógicos__: True, False;     ==, !=, &&, ||
 - __Print__: 
 
 ```python
