@@ -44,7 +44,7 @@ print(10*2)
 >>> len('Help') # length - dá o comprimento da String
 4
 
->>> "a-maria-e-o-manel".split('-')
+>>> "a-maria-e-o-manel".split('-') # dividir uma string numa lista consoante o caracter recebido
 ['a', 'maria', 'e', 'o', 'manel']
 ```
 
