@@ -1,5 +1,7 @@
 # Resumos PYTHON (finalmente, demoraste muito a ficar atual UMinho)
 
+### COmentários, #
+
 ## Tópicos básicos de programação
 
 - __Nomes de variáveis__ (_exemplos_): _filho, somaNumeros, jogar_… (lowerCase + HigerCase)
