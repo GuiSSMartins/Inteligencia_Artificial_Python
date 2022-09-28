@@ -14,10 +14,18 @@
 - __Inteiros e Reais__: 12,-34, 22342, 13435.24, -2454 ** 0.5
 - __Operações matemáticas__: +, -, *, /, % (resto da divisão inteira), ** (potencia)
 - __Valores & Operadores Lógicos__: True, False;     ==, !=, &&, ||
-- __Print__: 
 
 ```python
+# Escrever coisas no ecrã
 print(10*2) 
 ```
 
-
+### Funções uteis para _Strings_
+```python
+>>>'artificial'.upper()
+'ARTIFICIAL'
+>>>'HELP'.lower()
+'help'
+>>>len('Help')
+4
+```
