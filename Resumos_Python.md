@@ -1,6 +1,10 @@
-# Resumos PYTHON (finalmente, demoraste muito a ficar atual UMinho)
+# Resumos PYTHON 
+###(finalmente, demoraste muito a ficar atual UMinho)
 
-### Comentários ##
+### Comentários
+```python
+# A revolução no mundo da progarmação
+```
 
 ## Tópicos básicos de programação
 
