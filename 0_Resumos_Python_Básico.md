@@ -17,10 +17,8 @@
 ```python
 >>> not (1==0)
 True
-
 >>> (2==4-2) and (2==3)
 False
-
 >>> (2==4-2) or (2==3)
 True
 ```
@@ -37,13 +35,11 @@ print(10*2)
 
 >>> 'artificial'.upper()
 'ARTIFICIAL'
-
 >>> 'HELP'.lower()
 'help'
 
 >>> len('Help') # length - dá o comprimento da String
 4
-
 >>> "a-maria-e-o-manel".split('-') # dividir uma string numa lista consoante o caracter recebido
 ['a', 'maria', 'e', 'o', 'manel']
 ```
@@ -58,4 +54,11 @@ print(10*2)
 >>> outrasFrutas = ['kivi','morangos']
 >>> frutas + outrasFrutas # + para concatenar listas
 ['maçã', 'laranja', 'pêra', 'banana', 'kivi', 'morangos']
+
+# Indexação Negativa para aceder aos elementos pela ordem de trás para a frente.
+ 
+>>> frutas[-1] # com frutas[-1] acede-se ao último elemento
+'banana'
+>>> frutas[-2]
+'pêra'
 ```
