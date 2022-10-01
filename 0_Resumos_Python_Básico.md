@@ -8,6 +8,8 @@
 
 ## Tópicos básicos de programação
 
+__ATENÇÃO__: Não é preciso declarar os tipos da variáveis. O _python_ é capaz de inferir os tipos sozinho.
+
 - __Nomes de variáveis__ (_exemplos_): _filho, somaNumeros, jogar_… (lowerCase + HigerCase)
 - __Strings__ (_entre aspas simples_ '' OU _duplas_ ""): ‘Miguel', "Miguel", ‘Abraço', '@$%'
 - __Inteiros e Reais__: 12,-34, 22342, 13435.24, -2454 ** 0.5
@@ -15,11 +17,9 @@
 - __Valores & Operadores Lógicos__: True, False;     ==, !=;      not, and, or
 
 ```python
->>> not (1==0)
-True
 >>> (2==4-2) and (2==3)
 False
->>> (2==4-2) or (2==3)
+>>> not ( not ((2==4-2) or (2==3)) )
 True
 ```
 
