@@ -19,7 +19,7 @@ __ATENÇÃO__: Não é preciso declarar os tipos da variáveis. O _python_ é ca
 ```python
 >>> (2==4-2) and (2==3)
 False
->>> not ( not ((2==4-2) or (2==3)) )
+>>> not ((2!=4-2) or (2==3))
 True
 ```
 
