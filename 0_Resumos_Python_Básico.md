@@ -89,7 +89,7 @@ Se estiver entre parenteses
 >>> frutas.reverse # reverter os elementos da lista
 ```
 
-### Ciclos _for_ & _while_
+### Ciclos _for_ & _while_ + uso de _print_ (escrita no ecrã)
 
 ```python
 frutas = ['maçãs', 'laranjas', 'pèras', 'bananas']
@@ -98,7 +98,7 @@ for fruta in frutas:
 precosFruta = {'maçãs': 2.00, 'laranjas': 1.50, 'pêras': 1.75}
 for fruta, preco in precosFruta.items():
    if preco < 2.00:
-      print('As %s custam %f o kg' % (fruta, preco))
+      print('As %s custam %f o kg' % (fruta, preco)) # colocamos as variáveis na forma % como na linguagem C
    else:
       print("As " + fruta + ' são demasiado caras!')
 ```
@@ -127,9 +127,11 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 É uma lista _não ordenada_ __sem elementos duplicados__.
 
 ```python
-# COnversão Lista -> Conjunto (função set())
+# Conversão Lista -> Conjunto (função set())
 >>> formas = ['círculo','quadrado','triângulo','círculo']
 >>> formas = set(formas)
 >>> formas
 {'triângulo', 'quadrado', 'círculo'}
+
+# podemos criar conjuntos de outra forma
 ```
