@@ -89,6 +89,20 @@ Se estiver entre parenteses
 >>> frutas.reverse # reverter os elementos da lista
 ```
 
+### Ciclos _for_ & _while_
+
+```python
+frutas = ['maçãs', 'laranjas', 'pèras', 'bananas']
+for fruta in frutas:
+   print(fruta + ' para venda')
+precosFruta = {'maçãs': 2.00, 'laranjas': 1.50, 'pêras': 1.75}
+for fruta, preco in precosFruta.items():
+   if preco < 2.00:
+      print('As %s custam %f o kg' % (fruta, preco))
+   else:
+      print("As " + fruta + ' são demasiado caras!')
+```
+
 ### Tuplos
 Igual a uma lista mas que é imutável a partir do momento em que é criado, i.e., não pode mudar. 
 
@@ -98,7 +112,7 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 >>> par = (3,5)
 >>> par[0]
 3
->>> outro_par = 5,5 # Na verdade, nem precisamos de parêntesis.
+>>> outro_par = 5,5 # Na verdade, nem precisamos de parênteses ().
 >>> outro_par
 (5, 5)
 
