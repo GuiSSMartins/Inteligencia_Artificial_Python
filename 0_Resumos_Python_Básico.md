@@ -15,20 +15,18 @@ __ATENÇÃO__: Não é preciso declarar os tipos da variáveis. O interpretador 
 - __Valores & Operadores Lógicos__: True, False;     ==, !=;      not, and, or
 
 ```python
->>> (2==4-2) and (2==3)
-False
->>> not ((2!=4-2) or (2==3))
+>>> not ((2!=4-2) or (2==3) and ((2==4-2) and (2==3)))
 True
 ```
 
 ```python
-# Escrever coisas no ecrã
-print(10*2) 
+print(10*2) # Escrever coisas no ecrã 
 ```
 
 # AVISO - Funções
 Nem todas as funções modificam o conteúdo de uma variável. Mostram apenas um resultado!!!!
-Se estiver entre parenteses 
+- Se o nome da função estiver dentro dos parenteses, este muda o conteúdo da mesma.
+- Se o nome da função
 
 ### Funções uteis para _Strings_
 ```python
@@ -36,9 +34,9 @@ Se estiver entre parenteses
 >>> "artificial" + " " + "intelligence"
 'artificial intelligence'
 
->>> 'artificial'.upper()
+>>> 'artificial'.upper() # TUDO para Maiusculas
 'ARTIFICIAL'
->>> 'HELP'.lower()
+>>> 'HELP'.lower() # TUDO para minusculas
 'help'
 
 >>> len('Help') # length - dá o comprimento da String
