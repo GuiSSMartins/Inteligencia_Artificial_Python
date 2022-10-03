@@ -103,6 +103,20 @@ for fruta, preco in precosFruta.items():
       print("As " + fruta + ' são demasiado caras!')
 ```
 
+
+### Criar uma sequência de números em Lista (_range()_)
+```python
+>>> list(range(10)) # do 0 até (valor_inserido - 1) !!!!!
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+### Uso da função _range()_ em ciclos _for_
+```python
+ferramentas = ['enxada', 'ancinho', 'pá']
+for index in range(len(ferramentas)):
+   print(ferramentas[index])
+```
+
 ### Tuplos
 Igual a uma lista mas que é imutável a partir do momento em que é criado, i.e., não pode mudar. 
 
@@ -134,4 +148,13 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 {'triângulo', 'quadrado', 'círculo'}
 
 # podemos criar conjuntos de outra forma
+```
+
+## Programação Funcional em Python (Funções _lambda_, _map_ e _filter_)
+```python
+>>> list(map(lambda x: x * x, [1,2,3]))
+[1, 4, 9]
+
+>>> list(filter(lambda x: x > 3, [1,2,3,4,5,4,3,2,1]))
+[4, 5, 4]
 ```
