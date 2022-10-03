@@ -14,4 +14,9 @@ tipo de objectos (a chave) noutro (o valor).
 A chave tem de ser de um tipo imutável (string, número ou tuplo). O
 valor pode ser de qualquer tipo.
 
-Um dicionário é uma tabela hash em que não existe uma ordem das chaves.
+Um _Dicionário_ é uma tabela _hash_ em que não existe uma ordem das chaves.
+
+```python
+>>> estudantes = {19777: 'Pedro', 20200: 'Liza', 21999: 'Zanga'}
+>>> estudantes[19777] # 'Pedro'
+```
