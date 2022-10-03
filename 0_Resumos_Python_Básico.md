@@ -8,7 +8,7 @@
 
 ## Tópicos básicos de programação
 
-__ATENÇÃO__: Não é preciso declarar os tipos da variáveis. O _python_ é capaz de inferir os tipos sozinho.
+__ATENÇÃO__: Não é preciso declarar os tipos da variáveis. O interpretador do _python_ é capaz de inferir os tipos das variáveis.
 
 - __Nomes de variáveis__ (_exemplos_): _filho, somaNumeros, jogar_… (lowerCase + HigerCase)
 - __Strings__ (_entre aspas simples_ '' OU _duplas_ ""): ‘Miguel', "Miguel", ‘Abraço', '@$%'
@@ -87,6 +87,7 @@ Se estiver entre parenteses
 ['ananás', 'uvas']
 
 >>> frutas.reverse # reverter os elementos da lista
+
 ```
 
 ### Ciclos _for_ & _while_ + uso de _print_ (escrita no ecrã)
@@ -157,4 +158,16 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 
 >>> list(filter(lambda x: x > 3, [1,2,3,4,5,4,3,2,1]))
 [4, 5, 4]
+```
+
+### Listas por compreensão
+```python
+>>> nums = [1,2,3,4,5,6]
+>>> plusOneNums = [x+1 for x in nums]
+>>> plusOneNums
+[2, 3, 4, 5, 6, 7]
+
+>>> oddNums = [x for x in nums if x % 2 == 1]
+>>> oddNums
+[1, 3, 5]
 ```
