@@ -123,21 +123,17 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 
 ```python
 >>> par = (3,5)
->>> par[0]
-3
+>>> par[0] # 3
 >>> outro_par = 5,5 # Na verdade, nem precisamos de parênteses ().
->>> outro_par
-(5, 5)
+>>> outro_par # (5, 5)
 
 >>> x,y = par
->>> x
-3
->>> y
-5
+>>> x # 3
+>>> y # 5
 ```
 
 ### Conjuntos (da Matemática Discreta)
-É uma lista _não ordenada_ __sem elementos duplicados__.
+É uma lista _não ordenada_ __sem elementos duplicados__ (_principal vantagem_ em relação às listas).
 
 ```python
 # Conversão Lista -> Conjunto (função set())
@@ -147,25 +143,4 @@ __ATENÇÃO__: Os tuplos são envolvidos em __parêntesis ()__ enquanto as lista
 {'triângulo', 'quadrado', 'círculo'}
 
 # podemos criar conjuntos de outra forma
-```
-
-## Programação Funcional em Python (Funções _lambda_, _map_ e _filter_)
-```python
->>> list(map(lambda x: x * x, [1,2,3]))
-[1, 4, 9]
-
->>> list(filter(lambda x: x > 3, [1,2,3,4,5,4,3,2,1]))
-[4, 5, 4]
-```
-
-### Listas por compreensão
-```python
->>> nums = [1,2,3,4,5,6]
->>> plusOneNums = [x+1 for x in nums]
->>> plusOneNums
-[2, 3, 4, 5, 6, 7]
-
->>> oddNums = [x for x in nums if x % 2 == 1]
->>> oddNums
-[1, 3, 5]
 ```
