@@ -1,9 +1,7 @@
 # Resumos PYTHON 
 (finalmente, demoraste muito a ficar atual UMinho)
-
-### Comentários
 ```python
-# A revolução no mundo da programação
+# COMENTÁRIOS: PROIBIDO ; ponto e vírgula !!!!!!!
 ```
 
 ## Tópicos básicos de programação
