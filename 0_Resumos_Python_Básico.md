@@ -20,7 +20,10 @@ True
 ```
 
 ```python
-print(10*2) # Escrever coisas no ecrã 
+if preco < 2.00:
+   print('As %s custam %f o kg' % (fruta, preco)) # colocamos as variáveis na forma % como na linguagem C
+else:
+   print("As " + fruta + ' são demasiado caras!') # OU podemos juntar como em JAVA
 ```
 
 # AVISO - Funções
@@ -50,8 +53,8 @@ Nem todas as funções modificam o conteúdo de uma variável. Mostram apenas um
 ### Listas
 ```python
 >>> frutas = ['maçã','laranja','pêra','banana']
->>> frutas[0]
-'maçã'
+>>> frutas[0] # 'maçã'
+
 >>> outrasFrutas = ['kivi','morangos']
 >>> frutas + outrasFrutas # + para concatenar listas
 ['maçã', 'laranja', 'pêra', 'banana', 'kivi', 'morangos']
@@ -60,12 +63,10 @@ Nem todas as funções modificam o conteúdo de uma variável. Mostram apenas um
  
 >>> frutas[-1] # com frutas[-1] acede-se ao último elemento
 'banana'
->>> frutas[-2]
-'pêra'
+>>> frutas[-2] # 'pêra'
 
 # obter o último elemento de uma lista depois de ser removido
->>> frutas.pop()
-'banana'
+>>> frutas.pop() # 'banana'
 >>> frutas
 ['maçã', 'laranja', 'pêra']
 
@@ -86,18 +87,19 @@ Nem todas as funções modificam o conteúdo de uma variável. Mostram apenas um
 
 ```
 
-### Ciclos _for_ & _while_ + uso de _print_ (escrita no ecrã)
+### Ciclos _for_ & _while_
 
 ```python
 frutas = ['maçãs', 'laranjas', 'pèras', 'bananas']
 for fruta in frutas:
-   print(fruta + ' para venda')
+   # (...)
+
 precosFruta = {'maçãs': 2.00, 'laranjas': 1.50, 'pêras': 1.75}
 for fruta, preco in precosFruta.items():
    if preco < 2.00:
-      print('As %s custam %f o kg' % (fruta, preco)) # colocamos as variáveis na forma % como na linguagem C
+      # (...)
    else:
-      print("As " + fruta + ' são demasiado caras!')
+      # (...)
 ```
 
 
