@@ -1,7 +1,9 @@
-# Algoritmos sobre prafos em Python
+# Algoritmos sobre grafos em Python
 
 Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no final deste _md_)
 
+2 representações dos grafos:
+- Matrizes de adjacência
 
 
 ------------------------------------------------------
