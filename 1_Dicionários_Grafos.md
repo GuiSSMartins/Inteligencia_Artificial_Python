@@ -33,6 +33,8 @@ class Node:
     # são iguais se nome igual, senão 
 ```
 
+## Construção de Grafos + Funções de manipulação
+
 ```python
 # Importar a classe nodo
 from nodo import Node
