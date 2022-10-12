@@ -82,12 +82,23 @@ class Graph:
         return None
         
   # Imprimir arestas
+  def imprime_aresta(self)_
+    listaA = ""
+    for nodo in self.m_graph.keys():
+      for (nodo2, custo) in self.m_graph[nodo]:
+        listaA = listaA + nodo + " ->" + nodo2 + " custo:" + str(custo) + "\n"
+    return listaA
     
   # Devolver o custo da aresta
   def get_arc_cost(self, node1, node2):
-    
+    custoT = math.inf # rever algortimo de Dijsktra
+    a = self.m_graph[node1] # lista de arestas para aquele nodo
+    for (nodo, custo) in a:
+      if nodo==node2:
+        custoT=custo
+    return custoT
   
-  # Dado um caminho calcula o seu custo
+  # Dado um caminho, calcula o seu custo
   def calcula_custo(self, caminho): # caminho funciona como um array
 ```
 
