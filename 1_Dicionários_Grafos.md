@@ -3,7 +3,7 @@
 Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no final deste _md_)
 
 2 representações dos grafos:
-- Matrizes de adjacência
+- Matrizes de adjacência (Listas de adjacências)
 
 ## (Resolução da Ficha 1)
 
@@ -12,7 +12,9 @@ Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no fin
 ```python
 # Criar os nodes
 class Node:
+  # Construtor do nodo......
   def __init__(self, name):
+    self.m_name = str(name)
   
   def __repr__(self):
     return "node " + self.m_name
@@ -26,18 +28,50 @@ class Node:
 # Importar a classe nodo
 from nodo import Node
 
-class Graph
+class Graph:
+  # Construtor da classe
+  def __init__(sefl, directed=False): # Grafo NÃO-Orientado (As arestas não têm sentido)
+    
+  
+  # Escrever grafo como String
+  
+  # Adicionar aresta no grafo, com peso
+  
+  def add_edge(self, node1, node2, weight): # node1 e node2 são os nomes de cada nó
+    n1 = Node(node1) # cria um objeto com o nome dado
+    n2 = Node(node2) # cria um objeto com o nome dado
+    if (n1 not in self.m_nodes):
+      self.m_nodes.append(n1)
+      self.m_graph[node1] = set()
+    else:
+      self.get_node_by_name(node1)
+    
+    if (n2 not in self.m_nodes):
+      self.m_nodes.append(n2)
+    else:
+      n2 = self.get_node_by_name(node2)
+      
+    self.m_graph[node1].add((node2, weight))
+    
+    # se o grafo for não direcionado, colocar a aresta inversa
+    if not self.m_directed:
+      self.m_graph[node2] = set()
+  # Encontrar nodo 
 ```
+
+### Exemplo de grafo
+
+def main():
+
+g = graph
 
 ------------------------------------------------------
 
 ## Dicionários
 
-O _Dicionário_ corresponde a uma tabela que mapeia um
-tipo de objectos (a chave) noutro (o valor). 
+O _Dicionário_ corresponde a uma tabela que mapeia um tipo de objectos (a chave) noutro (o valor). 
 
-A chave tem de ser de um tipo imutável (string, número ou tuplo). O
-valor pode ser de qualquer tipo.
+A chave tem de ser de um tipo imutável (string, número ou tuplo). O valor pode ser de qualquer tipo.
 
 Um _Dicionário_ é uma tabela _hash_ em que não existe uma ordem das chaves.
 
