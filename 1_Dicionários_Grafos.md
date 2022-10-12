@@ -15,10 +15,19 @@ class Node:
   # Construtor do nodo......
   def __init__(self, name):
     self.m_name = str(name)
+    # Colocar objeto que o nodo vai referenciar, pode ser qualquer coisa !!!!!!!!!!!!!!
+  
+  def __str__(self):
+    return "node " + self.m_name
   
   def __repr__(self):
     return "node " + self.m_name
+  
+  def __getName__(self):
+    return self.m_name
     
+   def __setName(self, name):
+    self.m_name=name
     
   def __eq__(self, other)
     # são iguais se nome igual, senão 
