@@ -40,12 +40,17 @@ from nodo import Node
 class Graph:
   # Construtor da classe
   def __init__(sefl, directed=False): # Grafo NÃO-Orientado (As arestas não têm sentido)
-    
+    self.m_nodes = [] # lista de nodos do grafo
+    self.m_directed = directed # se o grafo é direcionado ou não
+    self.m_graph = {} # diconário para armazenar os nodos, arestas e pesos
+    self.m_h = {} # dicionário para posteriormente armazenar as heurísticas para cada nodo, usado na pesquisa informada
   
   # Escrever grafo como String
+  def __str__(self):
+    out = ""
+    for
   
   # Adicionar aresta no grafo, com peso
-  
   def add_edge(self, node1, node2, weight): # node1 e node2 são os nomes de cada nó
     n1 = Node(node1) # cria um objeto com o nome dado
     n2 = Node(node2) # cria um objeto com o nome dado
@@ -62,7 +67,7 @@ class Graph:
       
     self.m_graph[node1].add((node2, weight))
     
-    # se o grafo for não direcionado, colocar a aresta inversa
+    # se o grafo for Não-direcionado, colocar a aresta inversa
     if not self.m_directed:
       self.m_graph[node2] = set()
   # Encontrar nodo 
