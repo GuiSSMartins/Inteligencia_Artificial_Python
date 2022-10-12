@@ -7,7 +7,7 @@ Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no fin
 
 ## (Resolução da Ficha 1)
 
-![](https://raw.githubusercontent.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png)
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png?raw=true)
 
 ```python
 # Criar os nodes
