@@ -148,7 +148,7 @@ def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (
 # Variação com Limitação do nº de ramificações (solução para evitarmos os grafos infinitos)
 # (ver slides de IA)
 
-# Procura BFS
+# Procura BFS - Breadth-first search (Pesquisa em largura)
 ```
 
 
