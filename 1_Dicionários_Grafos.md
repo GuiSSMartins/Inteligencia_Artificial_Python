@@ -58,7 +58,7 @@ class Graph:
       self.m_nodes.append(n1)
       self.m_graph[node1] = set()
     else:
-      self.get_node_by_name(node1)
+      n1 = self.get_node_by_name(node1)
     
     if (n2 not in self.m_nodes):
       self.m_nodes.append(n2)
