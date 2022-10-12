@@ -126,6 +126,10 @@ def main():
   g.add_edge("c", "d", 3)
   g.add_edge("g", "t", 2)
   g.add_edge("d", "t", 3)
+  
+  inicio = input("Nodo Inicial -> ")
+  fim = 
+  print(g.procura_DFS(inicio, fim, path=[], visited=set()))
 ```
 
 ### Algoritmos de procura/pesquisa em grafos (param quando chegam ao nodo "end")
