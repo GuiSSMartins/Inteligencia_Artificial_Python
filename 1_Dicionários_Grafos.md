@@ -116,13 +116,19 @@ class Graph:
 ```python
 def main():
   g = Graph()
-  
+  # Grafo - Ficha 1
   g.add_edge("s", "e", 2)
-  g.add_edge("s", )
-  g.add_edge("a", "b")
+  g.add_edge("s", "a", 2)
+  g.add_edge("a", "b", 2)
+  g.add_edge("e", "f", 5)
+  g.add_edge("b", "c", 2)
+  g.add_edge("f", "g", 2)
+  g.add_edge("c", "d", 3)
+  g.add_edge("g", "t", 2)
+  g.add_edge("d", "t", 3)
 ```
 
-### Algoritmos de procura/pesquisa em grafos
+### Algoritmos de procura/pesquisa em grafos (param quando chegam ao nodo "end")
 ```python
 # Continuação da classe Graph
 
