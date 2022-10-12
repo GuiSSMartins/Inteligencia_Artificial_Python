@@ -83,7 +83,7 @@ class Graph:
       else:
         return None
         
-  # Imprimir arestas
+  # Imprimir arestas (!!! plural !!!)
   def imprime_aresta(self)_
     listaA = ""
     for nodo in self.m_graph.keys():
@@ -125,6 +125,8 @@ def main():
 ### Algoritmos de procura/pesquisa em grafos
 ```python
 # Procura DFS - Depth First Search (Pesquisa em Profundidade)
+
+# Variação 
 ```
 
 
