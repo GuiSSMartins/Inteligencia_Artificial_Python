@@ -129,6 +129,8 @@ def main():
 ```
 
 ### Algoritmos de procura/pesquisa em grafos (param quando chegam ao nodo "end")
+Devolvem-nos os caminhos para atingir os vários nodos, até que se atinja o nodo final/_"end"_
+
 ```python
 # Continuação da classe Graph
 
