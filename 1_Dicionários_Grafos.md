@@ -70,6 +70,8 @@ class Graph:
     # se o grafo for Não-direcionado, colocar a aresta inversa
     if not self.m_directed:
       self.m_graph[node2] = set()
+      self.m_graph[node2].add((node1, weight))
+    
   # Encontrar nodo 
 ```
 
