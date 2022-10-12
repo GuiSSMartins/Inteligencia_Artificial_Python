@@ -102,6 +102,14 @@ class Graph:
   
   # Dado um caminho, calcula o seu custo
   def calcula_custo(self, caminho): # caminho funciona como um array
+    # caminho é uma lista de nodos
+    teste=caminho
+    custo=0
+    i=0
+    while i+1 < len(teste):
+      custo = custo + self.get_arc_cost(teste[i], teste[i+1])
+      i=i+1
+    return custo
 ```
 
 ### Exemplo de grafo
@@ -116,7 +124,7 @@ def main():
 
 ### Algoritmos de procura/pesquisa em grafos
 ```python
-
+# Procura DFS - Depth First Search (Pesquisa em Profundidade)
 ```
 
 
