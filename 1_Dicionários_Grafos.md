@@ -48,7 +48,7 @@ class Graph:
   # Escrever grafo como String
   def __str__(self):
     out = ""
-    for
+    for key in self.m_graph
   
   # Adicionar aresta no grafo, com peso
   def add_edge(self, node1, node2, weight): # node1 e node2 são os nomes de cada nó
@@ -71,15 +71,41 @@ class Graph:
     if not self.m_directed:
       self.m_graph[node2] = set()
       self.m_graph[node2].add((node1, weight))
-    
+  
   # Encontrar nodo 
+  def get_node_by_name(self, name):
+    search_node = Node(name)
+    for node in self.m_nodes:
+      if node == search_node:
+        return node
+      else:
+        return None
+        
+  # Imprimir arestas
+    
+  # Devolver o custo da aresta
+  def get_arc_cost(self, node1, node2):
+    
+  
+  # Dado um caminho calcula o seu custo
+  def calcula_custo(self, caminho): # caminho funciona como um array
 ```
 
 ### Exemplo de grafo
-
+```python
 def main():
+  g = Graph()
+  
+  g.add_edge("s", "e", 2)
+  g.add_edge("s", )
+  g.add_edge("a", "b")
+```
 
-g = graph
+### Algoritmos de procura/pesquisa em grafos
+```python
+
+```
+
 
 ------------------------------------------------------
 
