@@ -7,11 +7,26 @@ Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no fin
 
 ## (Resolução da Ficha 1)
 
-![alt text](https://raw.githubusercontent.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png)
+![](https://raw.githubusercontent.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png)
 
 ```python
+# Criar os nodes
 class Node:
-  def _init_(self, name)
+  def __init__(self, name):
+  
+  def __repr__(self):
+    return "node " + self.m_name
+    
+    
+  def __eq__(self, other)
+    # são iguais se nome igual, senão 
+```
+
+```python
+# Importar a classe nodo
+from nodo import Node
+
+class Graph
 ```
 
 ------------------------------------------------------
