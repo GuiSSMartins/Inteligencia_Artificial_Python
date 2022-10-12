@@ -124,9 +124,31 @@ def main():
 
 ### Algoritmos de procura/pesquisa em grafos
 ```python
-# Procura DFS - Depth First Search (Pesquisa em Profundidade)
+# Continuação da classe Graph
 
-# Variação 
+# Procura DFS - Depth First Search (Pesquisa em Profundidade)
+def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (Pode ter Repetidos)
+  path.append(start)
+  visited.add(start)   # podemos admitir que o start é o vértice atual
+  
+  # m_graph -> lista de adjacências
+  
+  if start == end:
+    # calcular o custo do caminh; função calcula custo
+    custoT = self.calcula_custo(path)
+    return (path, custoT)
+  for (adjacente, peso) in self.m_graph[start]:
+    if adjacente not in visited:
+      resultado = self.procura_DFS(adjacente, end, path, visited) # recursivo
+      if resultado is not None:
+        return resultado
+  path.pop() # se não encontra, remover o que está no caminho...
+  return None
+
+# Variação com Limitação do nº de ramificações (solução para evitarmos os grafos infinitos)
+# (ver slides de IA)
+
+# Procura BFS
 ```
 
 
