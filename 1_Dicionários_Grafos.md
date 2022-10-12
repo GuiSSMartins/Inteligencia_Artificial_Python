@@ -5,6 +5,14 @@ Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no fin
 2 representações dos grafos:
 - Matrizes de adjacência
 
+## (Resolução da Ficha 1)
+
+![alt text](https://raw.githubusercontent.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png)
+
+```python
+class Node:
+  def _init_(self, name)
+```
 
 ------------------------------------------------------
 
