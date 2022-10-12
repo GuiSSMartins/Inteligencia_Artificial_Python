@@ -129,7 +129,10 @@ def main():
 ```
 
 ### Algoritmos de procura/pesquisa em grafos (param quando chegam ao nodo "end")
+#### (Trabalho Prático - comparação entre diferentes tipos de algoritmos de pesquisa em grafos)
 Devolvem-nos os caminhos para atingir os vários nodos, até que se atinja o nodo final/_"end"_
+
+(Estes algoritmos não nos devolvem garantidamente o melhor caminho; __apenas__ devolve o __1º caminho__)
 
 ```python
 # Continuação da classe Graph
