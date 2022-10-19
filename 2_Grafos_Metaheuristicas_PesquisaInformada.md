@@ -75,7 +75,10 @@ Dado um nó _n_:
 
 ## 1) Pesquisa informada Gulosa (_Greedy Search_)
 
-(Versão pouco rigorosa): É uma adaptação do algoritmo BFS (de pesquisa em largura). Dentro da lista de nós adjacentes a partir daqueles já visitados, escolher aquele que tiver __menor valor__ de heuristica __h(n)__.
+(Versão pouco rigorosa): É uma adaptação do algoritmo BFS (de pesquisa em largura). Dentro da lista de nós adjacentes a partir daqueles já visitados, escolher aquele que tiver __menor valor__ de heuristica __h(n)__ .
+
+# ATENÇÃO:
+Neste tipo de algoritmos, há casos em que temos de procurar pelo __menor__ valor de heuristica (caminho mais curto) OU pelo __MAIOR__ valor de h(n) (caminho amis comprido).
 
 Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós tiverem sido visitados __OU__ quando tivermos alcançado o vértico objetivo/final.
 
@@ -93,4 +96,6 @@ Chagamos à solução ótima da Pesquisa Informada A* quando todos os nós tiver
 
 -> _Exemplo do grafo de cima_
 
-(Se considerarmos o grofo acima da Ficha 2)
+__ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
+
+-> _RESULTADO_ (com estado inicial em Redondo): __Redondo ->          -> Lisboa__ (_Custo da Solução_: ...)
