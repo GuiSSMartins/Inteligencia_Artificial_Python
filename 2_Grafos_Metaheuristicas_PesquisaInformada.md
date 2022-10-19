@@ -35,7 +35,7 @@ def main():
     g.add_edge("moita","alcochete", 20)
     g.add_edge("alcochete", "lisboa", 20)
     
-    g.add_heuristica("elvas", 276) # pesos
+    g.add_heuristica("elvas", 276) # valor da heuristica h(n) em cada nõ
     g.add_heuristica("borba", 250)
     g.add_heuristica("estremoz", 145)
     g.add_heuristica("evora", 95)
