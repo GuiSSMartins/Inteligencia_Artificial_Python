@@ -1,4 +1,4 @@
-# 2 - Aplicação de Metaheuristicas a Grafos (Não Orientados) e com Peso
+# 2 - Aplicação de Metaheuristicas - Pesquisa Informada - a Grafos (Não Orientados) e com Peso
 
 ![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Peso_Ficha2.png?raw=true)
 
@@ -72,7 +72,7 @@ Dado um nó _n_:
 - __f(n) = g(n) + h(n)__ : custo estimado de uma solução que passa pelo nó n.
 
 
-## 1) Pesquisa informada Gulosa
+## 1) Pesquisa informada Gulosa (_Greedy Search_)
 
 
 ## 2) Pesquisa informada A*
