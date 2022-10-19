@@ -75,6 +75,9 @@ Dado um nó _n_:
 
 ## 1) Pesquisa informada Gulosa (_Greedy Search_)
 
+(Versão pouco rigorosa: Dentro da lista de nós __adjacentes__ aos já visitados, aplicar a fórmula __f(n) = g(n) + h(n)__ e escolher o nó que tiver menor valor; escolher esse como nó seguinte da pesuisa total no grafo)
+
+Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós tiverem sido visitados.
 
 ## 2) Pesquisa informada A*
 
