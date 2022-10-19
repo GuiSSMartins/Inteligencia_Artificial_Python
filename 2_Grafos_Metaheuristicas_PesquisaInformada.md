@@ -79,7 +79,7 @@ Dado um nó _n_:
 
 Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós tiverem sido visitados __OU__ quando tivermos alcançado o vértico objetivo/final.
 
-### Exemplo do grafo de cima
+-> _Exemplo do grafo de cima_
 
 (Se considerarmos o grofo acima da Ficha 2)
 
@@ -89,6 +89,6 @@ Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós t
 
 Chagamos à solução ótima da Pesquisa Informada A* quando todos os nós tiverem sido visitados __OU__ quando tivermos alcançado o vértico objetivo/final.
 
-### Exemplo do grafo de cima
+-> _Exemplo do grafo de cima_
 
 (Se considerarmos o grofo acima da Ficha 2)
