@@ -75,9 +75,20 @@ Dado um nó _n_:
 
 ## 1) Pesquisa informada Gulosa (_Greedy Search_)
 
-(Versão pouco rigorosa: Dentro da lista de nós __adjacentes__ aos já visitados, aplicar a fórmula __f(n) = g(n) + h(n)__ e escolher o nó que tiver menor valor; escolher esse como nó seguinte da pesuisa total no grafo)
+(Versão pouco rigorosa): É uma adaptação do algoritmo BFS (de pesquisa em largura). Dentro da lista de nós adjacentes a partir daqueles já visitados, escolher aquele que tiver __menor valor__ de heuristica __h(n)__.
 
-Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós tiverem sido visitados.
+Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós tiverem sido visitados __OU__ quando tivermos alcançado o vértico objetivo/final.
+
+### Exemplo do grafo de cima
+
+(Se considerarmos o grofo acima da Ficha 2)
 
 ## 2) Pesquisa informada A*
 
+(Versão pouco rigorosa): Dentro da lista de nós __adjacentes__ aos já visitados, aplicar a fórmula __f(n) = g(n) + h(n)__ e escolher o nó que tiver menor valor de __f(n)__; escolher esse como nó seguinte da pesquisa no grafo.
+
+Chagamos à solução ótima da Pesquisa Informada A* quando todos os nós tiverem sido visitados __OU__ quando tivermos alcançado o vértico objetivo/final.
+
+### Exemplo do grafo de cima
+
+(Se considerarmos o grofo acima da Ficha 2)
