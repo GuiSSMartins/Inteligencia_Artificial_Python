@@ -5,7 +5,8 @@
 - __Representaçaõ do Estado__:
 - __Estado inicial__:
 - __Estado/teste objetivo__: Lisboa
-- __Custo da Solução__:
+- __Solução__: Redondo -> Monsaraz -> Barreiro -> Palmela -> Almada -> Lisboa
+- __Custo da Solução__: 215
 
 
 (ver os desenhos feitos no tablet para a aplicação dos algoritmos)
