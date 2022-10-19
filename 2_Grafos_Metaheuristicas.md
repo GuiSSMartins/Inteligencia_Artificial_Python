@@ -39,9 +39,10 @@ def main():
     g.add_heuristica("estremoz", 145)
     g.add_heuristica("evora", 95)
     g.add_heuristica("montemor", 70)
-    g.add_heuristica("")
-    g.add_heuristica("")
-    g.add_heuristica("")
+    g.add_heuristica("vendasnovas", 45)
+    g.add_heuristica("arraiolos", 220)
+    g.add_heuristica("alcacer", 140)
+    g.add_heuristica("palmela", 85)
 ```
 
 Correções feitas para nos adaptarmos melhor aos grafos COM PESO
@@ -62,14 +63,17 @@ class Graph:
 - É uma estimação adequada do custo ou longitude do passo (no espaço de procura) desde um estado até um objetivo.
 - Procura Heurística ou Informada.
 
-## 1) Pesquisa informada Gulosa
+Custos ótimos: têm sempre uma estrela __*__
 
 Dado um nó _n_:
-- __(n)__ = custo desde o nó inicial até n.
+- __g(n)__ = custo desde o nó inicial até n.
 - __h(n)__ = função heurística aplicada ao nó n. É o custo estimado desde n até uma solução.
 - __h*(n)__ = custo real de um caminho óptimo desde n até uma solução.
-z f (n) = g ( ) = g (n) + h ( ) + h (n) custo estimado de uma ) custo estimado de uma
-solução que passa pelo n ão que passa pelo nó n.
+- __f(n) = g(n) + h(n)__ : custo estimado de uma solução que passa pelo nó n.
+
+
+## 1) Pesquisa informada Gulosa
+
 
 ## 2) Pesquisa informada A*
 
