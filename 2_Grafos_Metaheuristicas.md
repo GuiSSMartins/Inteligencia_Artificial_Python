@@ -47,9 +47,11 @@ class Graph:
     self.m_h = {} # dicionário para posteriormente armazenar as heurísticas para cada nodo, usado na pesquisa informada
     # --------------------------------------------------------------------------------------------------------------
 ```
+## 0) Heurística
+- É uma estimação adequada do custo ou longitude do passo (no espaço de procura) desde um estado até um objetivo.
+- Procura Heurística ou Informada.
 
+## 1) Pesquisa informada Gulosa
 
-## Pesquisa informada Gulosa
-
-## Pesquisa informada A*
+## 2) Pesquisa informada A*
 
