@@ -81,7 +81,9 @@ Chagamos à solução ótima da Pesquisa Informada Gulosa quando todos os nós t
 
 -> _Exemplo do grafo de cima_
 
-(Se considerarmos o grofo acima da Ficha 2)
+__ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
+
+-> _RESULTADO_ (com estado inicial em Redondo): __Redondo -> Monsaraz -> Barreiro -> Palmela -> Almada -> Lisboa__ (_Custo da Solução_: 215)
 
 ## 2) Pesquisa informada A*
 
