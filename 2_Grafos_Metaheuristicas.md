@@ -22,8 +22,8 @@ def main():
     g = Graph()
 
     #Adicionar vertices ao grafo g
-    g.add_edge("s", "e",2)
-    g.add_edge("s", "a",2)
+    g.add_edge("elvas", "borba",15) # custos
+    g.add_edge("borba", "estremoz",2)
     g.add_edge("e", "f",5)
     g.add_edge("a", "b",2)
     g.add_edge("b", "c", 2)
@@ -31,6 +31,11 @@ def main():
     g.add_edge("d", "t",3)
     g.add_edge("g", "t", 2)
     g.add_edge("f","g",2)
+    
+    g.add_heuristica("elvas", 276) # pesos
+    g.add_heuristica("borba", 250)
+    g.add_heuristica("estremoz", 145)
+    g.add_heuristica("evora", )
 ```
 
 Correções feitas para nos adaptarmos melhor aos grafos COM PESO
@@ -52,6 +57,13 @@ class Graph:
 - Procura Heurística ou Informada.
 
 ## 1) Pesquisa informada Gulosa
+
+Dado um nó _n_:
+- __(n)__ = custo desde o nó inicial até n.
+- __h(n)__ = função heurística aplicada ao nó n. É o custo estimado desde n até uma solução.
+- __h*(n)__ = custo real de um caminho óptimo desde n até uma solução.
+z f (n) = g ( ) = g (n) + h ( ) + h (n) custo estimado de uma ) custo estimado de uma
+solução que passa pelo n ão que passa pelo nó n.
 
 ## 2) Pesquisa informada A*
 
