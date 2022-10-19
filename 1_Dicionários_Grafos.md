@@ -9,6 +9,9 @@ Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no fin
 
 ![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png?raw=true)
 
+Problema:
+Estado Inicial:
+
 ```python
 # Criar os nodes
 class Node:
@@ -17,20 +20,30 @@ class Node:
     self.m_name = str(name)
     # Colocar objeto que o nodo vai referenciar, pode ser qualquer coisa !!!!!!!!!!!!!!
   
+  # Devolve a representação na forma de string do nodo por forma a ser de leitura 'amigável'
   def __str__(self):
     return "node " + self.m_name
   
+  # Devolve representação 'oficial' do objeto, neste caso particular pode ser igual a __str__
   def __repr__(self):
     return "node " + self.m_name
   
+  # Obter o nome de um nodo
   def __getName__(self):
     return self.m_name
-    
-   def __setName(self, name):
+  
+  # Atualizar o nome de um nodo
+  def __setName(self, name):
     self.m_name=name
-    
+  
+  # Método utilizado para comparar dois nodos; neste caso, dois nodos são iguais se os nomes forem iguais
   def __eq__(self, other)
     # são iguais se nome igual, senão 
+  
+  # Devolve o hash de um nodo. Ao implementar o método __eq__ torna-se também necessário definir __hash__.
+  # Caso contrário o objeto torna-se unhashable
+  def __hash__(self):
+      return hash(self.m_name)
 ```
 
 ## Construção de Grafos + Funções de manipulação
