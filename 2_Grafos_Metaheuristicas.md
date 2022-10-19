@@ -24,18 +24,24 @@ def main():
     #Adicionar vertices ao grafo g
     g.add_edge("elvas", "borba",15) # custos
     g.add_edge("borba", "estremoz",2)
-    g.add_edge("e", "f",5)
-    g.add_edge("a", "b",2)
-    g.add_edge("b", "c", 2)
-    g.add_edge("c", "d", 3)
-    g.add_edge("d", "t",3)
-    g.add_edge("g", "t", 2)
-    g.add_edge("f","g",2)
+
+    # INCOMPLETO
+
+    g.add_edge("redondo","monsaraz",30)
+    g.add_edge("monsaraz","barreiro",120)
+    g.add_edge("barreiro","baixadabanheira", 5)
+    g.add_edge("baixadabanheira","moita", 7)
+    g.add_edge("moita","alcochete", 20)
+    g.add_edge("alcochete", "lisboa", 20)
     
     g.add_heuristica("elvas", 276) # pesos
     g.add_heuristica("borba", 250)
     g.add_heuristica("estremoz", 145)
-    g.add_heuristica("evora", )
+    g.add_heuristica("evora", 95)
+    g.add_heuristica("montemor", 70)
+    g.add_heuristica("")
+    g.add_heuristica("")
+    g.add_heuristica("")
 ```
 
 Correções feitas para nos adaptarmos melhor aos grafos COM PESO
