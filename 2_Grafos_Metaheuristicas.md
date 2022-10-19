@@ -33,6 +33,21 @@ def main():
     g.add_edge("f","g",2)
 ```
 
+Correções feitas para nos adaptarmos melhor aos grafos COM PESO
+
+```python
+
+class Graph:
+  # Construtor da classe
+  def __init__(sefl, directed=False): # Grafo NÃO-Orientado (As arestas não têm sentido)
+    self.m_nodes = [] # lista de nodos do grafo
+    self.m_directed = directed # se o grafo é direcionado ou não
+    self.m_graph = {} # diconário para armazenar os nodos, arestas e pesos
+    # -------------------------------------------------------------------------------------------------------------
+    self.m_h = {} # dicionário para posteriormente armazenar as heurísticas para cada nodo, usado na pesquisa informada
+    # --------------------------------------------------------------------------------------------------------------
+```
+
 
 ## Pesquisa informada Gulosa
 
