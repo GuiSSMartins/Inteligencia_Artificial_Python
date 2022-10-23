@@ -120,15 +120,12 @@ __ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
 #############################################
 
 def greedy(self, start, end):
-# open_list é uma lista de nodos visitados, mas com vizinhos
-# que ainda não foram todos visitados, começa com o  start
-# closed_list é uma lista de nodos visitados
-# e todos os seus vizinhos também já o foram
+# open_list é uma lista de nodos visitados, mas com vizinhos que ainda não foram todos visitados, começa com o start 
+# closed_list é uma lista de nodos visitados e todos os seus vizinhos também já o foram
 open_list = set([start])
 closed_list = set([])
 
-# parents é um dicionário que mantém o antecessor de um nodo
-# começa com start
+# parents é um dicionário que mantém o antecessor de um nodo começa com start
 parents = {}
 parents[start] = start
 
@@ -144,9 +141,8 @@ while len(open_list) > 0:
         print('Path does not exist!')
         return None
 
-    # se o nodo corrente é o destino
-    # reconstruir o caminho a partir desse nodo até ao start
-    # seguindo o antecessor
+    # se o nodo corrente é o destino, reconstruir o caminho a partir desse nodo 
+    # até ao start, seguindo o antecessor
     if n == end:
         reconst_path = []
 
