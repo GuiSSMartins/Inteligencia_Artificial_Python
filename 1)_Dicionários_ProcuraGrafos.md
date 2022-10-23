@@ -1,4 +1,4 @@
-# Algoritmos sobre grafos em Python
+# 1) Algoritmos Procura (Não-informada/Sem heuristicas) em grafos - _Python_
 
 Os grafos em _python_ são represenatdos por _Dicionários_ (explicação no final deste _md_)
 
