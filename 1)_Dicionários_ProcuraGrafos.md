@@ -268,7 +268,7 @@ def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (
 ```
 
 
-![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png?raw=true)
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/dfs.jpg)
 
 
 
@@ -315,7 +315,7 @@ def procura_BFS(self, start, end):
       path.append(parent[end])
 ```
 
-![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png?raw=true)
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Breadth-First-Search-Algorithm.gif)
 
 ------------------------------------------------------
 
