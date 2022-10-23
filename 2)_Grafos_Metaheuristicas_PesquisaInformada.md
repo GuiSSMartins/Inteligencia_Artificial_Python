@@ -64,7 +64,7 @@ class Graph:
 - É uma estimação adequada do custo ou longitude do passo (no espaço de procura) desde um estado até um objetivo.
 - Procura Heurística ou Informada.
 
-Custos ótimos: têm sempre uma estrela __*__
+_Custos ótimos_: têm sempre uma estrela __*__
 
 Dado um nó _n_:
 - __g(n)__ = custo desde o nó inicial até n.
@@ -72,8 +72,9 @@ Dado um nó _n_:
 - __h*(n)__ = custo real de um caminho óptimo desde n até uma solução.
 - __f(n) = g(n) + h(n)__ : custo estimado de uma solução que passa pelo nó n.
 
+------------------------------------------------------
 
-## 1) Pesquisa informada Gulosa (_Greedy Search_)
+# 1) Pesquisa informada Gulosa (_Greedy Search_)
 
 (Versão pouco rigorosa): É uma adaptação do algoritmo BFS (de pesquisa em largura). Dentro da lista de nós adjacentes a partir daqueles já visitados, escolher aquele que tiver __menor valor__ de heuristica __h(n)__ .
 
@@ -88,7 +89,9 @@ __ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
 
 -> _RESULTADO_ (com estado inicial em Redondo): __Redondo -> Monsaraz -> Barreiro -> Palmela -> Almada -> Lisboa__ (_Custo da Solução_: 215)
 
-## 2) Pesquisa informada A*
+------------------------------------------------------
+
+# 2) Pesquisa informada A*
 
 (Versão pouco rigorosa): Dentro da lista de nós __adjacentes__ aos já visitados, aplicar a fórmula __f(n) = g(n) + h(n)__ e escolher o nó que tiver menor valor de __f(n)__; escolher esse como nó seguinte da pesquisa no grafo.
 
