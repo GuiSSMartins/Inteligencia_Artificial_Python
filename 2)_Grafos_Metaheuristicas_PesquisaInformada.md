@@ -1,4 +1,4 @@
-# 2 - Aplicação de Metaheuristicas - Pesquisa Informada - a Grafos (Não Orientados) e com Peso
+# 2) Aplicação de Metaheuristicas - Pesquisa Informada - a Grafos (Não Orientados) e com Peso
 
 ![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Peso_Ficha2.png?raw=true)
 
@@ -89,6 +89,8 @@ __ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
 
 -> _RESULTADO_ (com estado inicial em Redondo): __Redondo -> Monsaraz -> Barreiro -> Palmela -> Almada -> Lisboa__ (_Custo da Solução_: 215)
 
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/greedy-search-path-example.gif)
+
 ------------------------------------------------------
 
 # 2) Pesquisa informada A*
@@ -102,3 +104,5 @@ Chagamos à solução ótima da Pesquisa Informada A* quando todos os nós tiver
 __ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
 
 -> _RESULTADO_ (com estado inicial em Redondo): __Redondo ->          -> Lisboa__ (_Custo da Solução_: ...)
+
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/AatrExample.gif)
