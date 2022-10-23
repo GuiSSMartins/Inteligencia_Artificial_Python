@@ -38,7 +38,8 @@ class Node:
   
   # Método utilizado para comparar dois nodos; neste caso, dois nodos são iguais se os nomes forem iguais
   def __eq__(self, other)
-    # são iguais se nome igual, senão 
+    # são iguais se nome igual, não usa o id
+    return self.m_name == other.m_name
   
   # Devolve o hash de um nodo. Ao implementar o método __eq__ torna-se também necessário definir __hash__.
   # Caso contrário o objeto torna-se unhashable
@@ -55,15 +56,17 @@ from nodo import Node
 class Graph:
   # Construtor da classe
   def __init__(sefl, directed=False): # Grafo NÃO-Orientado (As arestas não têm sentido)
-    self.m_nodes = [] # lista de nodos do grafo
+    self.m_nodes = [] # Lista de nodos do grafo
     self.m_directed = directed # se o grafo é direcionado ou não
-    self.m_graph = {} # diconário para armazenar os nodos, arestas e pesos
-    self.m_h = {} # dicionário para posteriormente armazenar as heurísticas para cada nodo, usado na pesquisa informada
+    self.m_graph = {} # Diconário para armazenar os nodos, arestas e pesos
+    self.m_h = {} # Dicionário para posteriormente armazenar as heurísticas para cada nodo, usado na pesquisa informada
   
   # Escrever grafo como String
   def __str__(self):
-    out = ""
-    for key in self.m_graph
+      out = ""
+      for key in self.m_graph.keys():
+          out = out + "node " + str(key) + ": " + str(self.m_graph[key]) + "\n"
+      return out
   
   # Adicionar aresta no grafo, com peso
   def add_edge(self, node1, node2, weight): # node1 e node2 são os nomes de cada nó
@@ -96,15 +99,19 @@ class Graph:
       else:
         return None
         
+  #####################################
   # Imprimir arestas (!!! plural !!!)
+  #####################################
   def imprime_aresta(self)_
     listaA = ""
     for nodo in self.m_graph.keys():
       for (nodo2, custo) in self.m_graph[nodo]:
         listaA = listaA + nodo + " ->" + nodo2 + " custo:" + str(custo) + "\n"
     return listaA
-    
+  
+  ##############################
   # Devolver o custo da aresta
+  ##############################
   def get_arc_cost(self, node1, node2):
     custoT = math.inf # rever algortimo de Dijsktra
     a = self.m_graph[node1] # lista de arestas para aquele nodo
@@ -113,7 +120,9 @@ class Graph:
         custoT=custo
     return custoT
   
+  ########################################
   # Dado um caminho, calcula o seu custo
+  ########################################
   def calcula_custo(self, caminho): # caminho funciona como um array
     # caminho é uma lista de nodos
     teste=caminho
@@ -123,8 +132,35 @@ class Graph:
       custo = custo + self.get_arc_cost(teste[i], teste[i+1])
       i=i+1
     return custo
-```
+    
+  ###############################
+  # desenha grafo  modo grafico
+  ###############################
+  def desenha(self):
+      # criar lista de vertices
+      lista_v = self.m_nodes
+      lista_a = []
+      g=nx.Graph()
 
+      #Converter para o formato usado pela biblioteca networkx
+      for nodo in lista_v:
+          n = nodo.getName()
+          g.add_node(n)
+          for (adjacente, peso) in self.m_graph[n]:
+              lista = (n, adjacente)
+              #lista_a.append(lista)
+              g.add_edge(n,adjacente,weight=peso)
+
+      #desenhar o grafo
+      pos = nx.spring_layout(g)
+      nx.draw_networkx(g, pos, with_labels=True, font_weight='bold')
+      labels = nx.get_edge_attributes(g, 'weight')
+      nx.draw_networkx_edge_labels(g, pos, edge_labels=labels)
+
+      plt.draw()
+      plt.show()
+```
+--------------------------------------------------
 ### Exemplo de grafo
 ```python
 #Importar classes nodo e grafo
@@ -135,7 +171,9 @@ def main():
     #Criar instância de grafo
     g = Graph()
 
-    #Adicionar vertices ao grafo g
+    #################################
+    # Adicionar vertices ao grafo g
+    #################################
     g.add_edge("s", "e",2)
     g.add_edge("s", "a",2)
     g.add_edge("e", "f",5)
@@ -146,7 +184,9 @@ def main():
     g.add_edge("g", "t", 2)
     g.add_edge("f","g",2)
 
-    #cosntrução de menu
+    ######################
+    # Cosntrução de menu
+    ######################
     saida = -1
     while saida != 0:
         print("1-Imprimir Grafo")
@@ -188,16 +228,22 @@ if __name__ == "__main__":
     main()
 ```
 
+-------------------------------------
+
 ### Algoritmos de procura/pesquisa em grafos (param quando chegam ao nodo "end")
 #### (Trabalho Prático - comparação entre diferentes tipos de algoritmos de pesquisa em grafos)
 Devolvem-nos os caminhos para atingir os vários nodos, até que se atinja o nodo final/_"end"_
 
 (Estes algoritmos não nos devolvem garantidamente o melhor caminho; __apenas__ devolve o __1º caminho__)
 
+## Procura DFS - Depth First Search (Pesquisa em Profundidade)
+
 ```python
 # Continuação da classe Graph
 
+###############################################################
 # Procura DFS - Depth First Search (Pesquisa em Profundidade)
+###############################################################
 def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (Pode ter Repetidos)
   path.append(start)
   visited.add(start)   # podemos admitir que o start é o vértice atual
@@ -205,7 +251,7 @@ def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (
   # m_graph -> lista de adjacências
   
   if start == end:
-    # calcular o custo do caminh; função calcula custo
+    # calcular o custo do caminho; função calcula custo
     custoT = self.calcula_custo(path)
     return (path, custoT)
   for (adjacente, peso) in self.m_graph[start]:
@@ -219,9 +265,16 @@ def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (
 # Variação com Limitação do nº de ramificações (solução para evitarmos os grafos infinitos)
 # (ver slides de IA)
 
+```
+-------------------------------------------------
+## Procura BFS - Breadth-first search (Pesquisa em largura)
+
+```python
+############################################################
 # Procura BFS - Breadth-first search (Pesquisa em largura)
+############################################################
 def procura_BFS(self, start, end):
-  #definir nodos visitados para evitar ciclos
+  # definir nodos visitados para evitar ciclos
   visited = set()
   fila = Queue()
   
@@ -245,7 +298,6 @@ def procura_BFS(self, start, end):
           parent[adjacente] = nodo_atual
           visited.add(adjacente)
     
-  
   # reconstruir o caminho
   path = []
   if path_found:
@@ -266,7 +318,7 @@ A chave tem de ser de um tipo imutável (string, número ou tuplo). O valor pode
 Um _Dicionário_ é uma tabela _hash_ em que não existe uma ordem das chaves.
 
 ```python
-# Criar e Aceder a dados de um DIcionário
+# Criar e Aceder a dados de um Dicionário (Esquerda: KEYS; Direita: VALUES)
 >>> estudantes = {19777: 'Pedro', 20200: 'Liza', 21999: 'Zanga'}
 >>> estudantes[19777] # 'Pedro'
 
@@ -287,9 +339,9 @@ Um _Dicionário_ é uma tabela _hash_ em que não existe uma ordem das chaves.
 >>> del estudantes[20200]
 >>> estudantes # {19777: 'Pedro', 21999: 'Zanga'}
 
-#--------------
+###############
 #    EXTRA    -
-#--------------
+###############
 
 # Criar dicionários de dicionários
 
