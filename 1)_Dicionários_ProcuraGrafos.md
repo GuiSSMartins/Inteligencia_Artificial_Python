@@ -53,6 +53,9 @@ class Node:
 # Importar a classe nodo
 from nodo import Node
 
+import networkx as nx
+import matplotlib.pyplot as plt
+
 class Graph:
   # Construtor da classe
   def __init__(sefl, directed=False): # Grafo NÃO-Orientado (As arestas não têm sentido)
