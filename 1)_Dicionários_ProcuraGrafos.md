@@ -24,7 +24,8 @@ class Node:
   def __str__(self):
     return "node " + self.m_name
   
-  # Devolve representação 'oficial' do objeto, neste caso particular pode ser igual a __str__
+  # Devolve representação 'oficial' do objeto
+  # neste caso particular pode ser igual a __str__
   def __repr__(self):
     return "node " + self.m_name
   
@@ -36,12 +37,14 @@ class Node:
   def __setName(self, name):
     self.m_name=name
   
-  # Método utilizado para comparar dois nodos; neste caso, dois nodos são iguais se os nomes forem iguais
+  # Método utilizado para comparar dois nodos
+  # neste caso, dois nodos são iguais se os nomes forem iguais
   def __eq__(self, other):
     # são iguais se nome igual, não usa o id
     return self.m_name == other.m_name
   
-  # Devolve o hash de um nodo. Ao implementar o método __eq__ torna-se também necessário definir __hash__.
+  # Devolve o hash de um nodo.
+  # Ao implementar o método __eq__ torna-se também necessário definir __hash__.
   # Caso contrário o objeto torna-se unhashable
   def __hash__(self):
       return hash(self.m_name)
