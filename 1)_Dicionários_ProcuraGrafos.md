@@ -37,7 +37,7 @@ class Node:
     self.m_name=name
   
   # Método utilizado para comparar dois nodos; neste caso, dois nodos são iguais se os nomes forem iguais
-  def __eq__(self, other)
+  def __eq__(self, other):
     # são iguais se nome igual, não usa o id
     return self.m_name == other.m_name
   
@@ -236,7 +236,7 @@ Devolvem-nos os caminhos para atingir os vários nodos, até que se atinja o nod
 
 (Estes algoritmos não nos devolvem garantidamente o melhor caminho; __apenas__ devolve o __1º caminho__)
 
-## Procura DFS - Depth First Search (Pesquisa em Profundidade)
+## -> Procura DFS - Depth First Search (Pesquisa em Profundidade)
 
 ```python
 # Continuação da classe Graph
@@ -266,8 +266,14 @@ def procura_DFS(self, start, end, path=[], visited=set()): # path é uma lista (
 # (ver slides de IA)
 
 ```
+
+
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png?raw=true)
+
+
+
 -------------------------------------------------
-## Procura BFS - Breadth-first search (Pesquisa em largura)
+## -> Procura BFS - Breadth-first search (Pesquisa em largura)
 
 ```python
 ############################################################
@@ -278,15 +284,17 @@ def procura_BFS(self, start, end):
   visited = set()
   fila = Queue()
   
+  ###################################################
   # adicionar o nodo inicial à fila e aos visitados
+  ###################################################
   fila.put(start)
   visited.add(start)
   
-  # garantir que o start node não tem pais
+  # garantir que o 'start node' não tem pais
   parent = dict()
   parent[start] = None
   
-  path_found = False
+  path_found = False # ainda não encontramos 
   while not fila.empty() and path_found == False:
     nodo_atual = fila.get()
     if nodo_atual == end:
@@ -298,7 +306,8 @@ def procura_BFS(self, start, end):
           parent[adjacente] = nodo_atual
           visited.add(adjacente)
     
-  # reconstruir o caminho
+  # reconstruir o caminho (nestes casos, como queremos que atinja o Nodo FINAL,...
+  # 
   path = []
   if path_found:
     path.append(end)
@@ -306,6 +315,7 @@ def procura_BFS(self, start, end):
       path.append(parent[end])
 ```
 
+![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/Grafo_Ficha1.png?raw=true)
 
 ------------------------------------------------------
 
@@ -318,7 +328,9 @@ A chave tem de ser de um tipo imutável (string, número ou tuplo). O valor pode
 Um _Dicionário_ é uma tabela _hash_ em que não existe uma ordem das chaves.
 
 ```python
+#############################################################################
 # Criar e Aceder a dados de um Dicionário (Esquerda: KEYS; Direita: VALUES)
+#############################################################################
 >>> estudantes = {19777: 'Pedro', 20200: 'Liza', 21999: 'Zanga'}
 >>> estudantes[19777] # 'Pedro'
 
@@ -326,24 +338,30 @@ Um _Dicionário_ é uma tabela _hash_ em que não existe uma ordem das chaves.
 >>> estudantes[20202]='Chico'
 >>> estudantes # {19777: 'Pedro', 21999: 'Zanga', 20202: 'Chico'}
 
+#######################################################
 # Devolve uma lista com TODAS as CHAVES do Dicionário
+#######################################################
 >>> list(estudantes.keys()) # [19777, 21999, 20202]
 
+#######################################################
 # Devolve uma lista com TODOS os VALUES do Dicionário
+#######################################################
 >>> list(estudantes.values()) # ['Pedro', 'Zanga', 'Chico']
 
+#############################################
 # Devolve uma lista dos pares do Dicionário
+#############################################
 >>> estudantes.items() # dict_items([(19777, 'Pedro'), (21999, 'Zanga'), (20202, 'Chico')])
 
+####################################
 # Apagar elemento de um Dicionário
+####################################
 >>> del estudantes[20200]
 >>> estudantes # {19777: 'Pedro', 21999: 'Zanga'}
 
-###############
-#    EXTRA    -
-###############
-
-# Criar dicionários de dicionários
+####################################################
+#    EXTRA -  Criar dicionários de dicionários     -
+####################################################
 
 >>> professores = {'iia': 'LuigiLuis','ec': 'Lou'}�
 >>> staff = {'professores': professores, 'estudantes':estudantes}
