@@ -57,7 +57,7 @@ class Graph:
     self.m_directed = directed # se o grafo é direcionado ou não
     self.m_graph = {} # diconário para armazenar os nodos, arestas e pesos
     # -------------------------------------------------------------------------------------------------------------
-    self.m_h = {} # dicionário para posteriormente armazenar as heurísticas para cada nodo, usado na pesquisa informada
+    self.m_h = {} # dicionário para armazenar as heurísticas para cada nodo, usado na pesquisa informada
     # --------------------------------------------------------------------------------------------------------------
 ```
 ## 0) Heurística
@@ -115,70 +115,73 @@ __ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
 ```python
 # (acrescentar à classe Grafo)
 
+#biblioteca necessária para se poder utilizar o valor math.inf  (infinito)
+import math
+
 #############################################
 # Pesquisa gulosa
 #############################################
 
 def greedy(self, start, end):
-# open_list é uma lista de nodos visitados, mas com vizinhos que ainda não foram todos visitados, começa com o start 
-# closed_list é uma lista de nodos visitados e todos os seus vizinhos também já o foram
-open_list = set([start])
-closed_list = set([])
+    # open_list é uma lista de nodos visitados, mas com vizinhos que ainda não foram todos visitados, começa com o start 
+    # closed_list é uma lista de nodos visitados e todos os seus vizinhos também já o foram
+    open_list = set([start])
+    closed_list = set([])
 
-# parents é um dicionário que mantém o antecessor de um nodo começa com start
-parents = {}
-parents[start] = start
+    # parents é um dicionário que mantém o antecessor de um nodo começa com start
+    parents = {}
+    parents[start] = start
 
-while len(open_list) > 0:
-    n = None
+    while len(open_list) > 0:
+        n = None
 
-    # encontraf nodo com a menor heuristica
-    for v in open_list:
-        if n == None or self.m_h[v] < self.m_h[n]:
-            n = v
+        # encontrar nodo com a menor heuristica
+        for v in open_list:
+            if n == None or self.m_h[v] < self.m_h[n]:
+                n = v
 
-    if n == None:
-        print('Path does not exist!')
-        return None
+        if n == None:
+            print('Path does not exist!')
+            return None
 
-    # se o nodo corrente é o destino, reconstruir o caminho a partir desse nodo 
-    # até ao start, seguindo o antecessor
-    if n == end:
-        reconst_path = []
+        # se o nodo corrente é o destino, reconstruir o caminho a partir desse nodo 
+        # até ao start, seguindo o antecessor
+        if n == end:
+            reconst_path = []
 
-        while parents[n] != n:
-            reconst_path.append(n)
-            n = parents[n]
+            while parents[n] != n:
+                reconst_path.append(n)
+                n = parents[n]
 
-        reconst_path.append(start)
+            reconst_path.append(start)
 
-        reconst_path.reverse()
+            reconst_path.reverse()
 
-        return (reconst_path, self.calcula_custo(reconst_path))
+            return (reconst_path, self.calcula_custo(reconst_path))
 
-    # para todos os vizinhos  do nodo corrente
-    for (m, weight) in self.getNeighbours(n):
-        # Se o nodo corrente nao esta na open nem na closed list
-        # adiciona-lo à open_list e marcar o antecessor
-        if m not in open_list and m not in closed_list:
-            open_list.add(m)
-            parents[m] = n
+        # para todos os vizinhos  do nodo corrente
+        for (m, weight) in self.getNeighbours(n):
+            # Se o nodo corrente nao esta na open nem na closed list
+            # adiciona-lo à open_list e marcar o antecessor
+            if m not in open_list and m not in closed_list:
+                open_list.add(m)
+                parents[m] = n
 
 
-    # remover n da open_list e adiciona-lo à closed_list
-    # porque todos os seus vizinhos foram inspecionados
-    open_list.remove(n)
-    closed_list.add(n)
+        # remover n da open_list e adiciona-lo à closed_list
+        # porque todos os seus vizinhos foram inspecionados
+        open_list.remove(n)
+        closed_list.add(n)
 
-print('Path does not exist!')
-return None
+    print('Path does not exist!')
+    return None
 ```
 
 ![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/greedy-search-path-example.gif)
 
 ------------------------------------------------------
 
-# 2) Pesquisa informada A*
+# 2) Pesquisa informada A* (_A star_)
 
 (Versão pouco rigorosa): Dentro da lista de nós __adjacentes__ aos já visitados, aplicar a fórmula __f(n) = g(n) + h(n)__ e escolher o nó que tiver menor valor de __f(n)__; escolher esse como nó seguinte da pesquisa no grafo.
 
@@ -189,5 +192,77 @@ Chagamos à solução ótima da Pesquisa Informada A* quando todos os nós tiver
 __ATENÇÃO__: com os NÓS _ADJACENTES_ aos __já visitados__
 
 -> _RESULTADO_ (com estado inicial em Redondo): __Redondo ->          -> Lisboa__ (_Custo da Solução_: ...)
+
+
+```python
+# (acrescentar à classe Grafo)
+
+#biblioteca necessária para se poder utilizar o valor math.inf  (infinito)
+import math
+
+#############################################
+# Pesquisa A* (A star)    ATENÇÃO: esta é a minha versão, pode estar errado
+#############################################
+
+def astar(self, start, end):
+    # open_list é uma lista de nodos visitados, mas com vizinhos que ainda não foram todos visitados, começa com o start 
+    # closed_list é uma lista de nodos visitados e todos os seus vizinhos também já o foram
+    open_list = set([start])
+    closed_list = set([])
+
+    # parents é um dicionário que mantém o antecessor de um nodo
+    # e o peso total desde esse nodo até ao start (começa com start)
+    parents = {}
+    parents[start] = (start,0)
+
+    while len(open_list) > 0:
+        n = None
+
+        # encontrar nodo com o menor valor (menor peso + menor heuristica)
+        custoTotal = inf
+        for v in open_list:
+            (parent, weightParent) = parents[v]
+            custoNodoAtual = weightParent + get_arc_cost(self, parent, v) + self.m_h[n] 
+            # custo segundo as heuristicas: f(n) = g(n) + h(n)
+            if n == None or custoNodoAtual < custoTotal:
+                n = v
+                custoTotal = custoNodoAtual
+
+        if n == None:
+            print('Path does not exist!')
+            return None
+
+        # se o nodo corrente é o destino, reconstruir o caminho a partir desse nodo 
+        # até ao start, seguindo o antecessor
+        if n == end:
+            reconst_path = []
+
+            while parents[n] != n:
+                reconst_path.append(n)
+                (n, weightN) = parents[n]
+
+            reconst_path.append(start)
+
+            reconst_path.reverse()
+
+            return (reconst_path, self.calcula_custo(reconst_path))
+
+        # para todos os vizinhos  do nodo corrente
+        for (m, weight) in self.getNeighbours(n):
+            # Se o nodo corrente nao esta na open nem na closed list
+            # adiciona-lo à open_list e marcar o antecessor
+            if m not in open_list and m not in closed_list:
+                open_list.add(m)
+                parents[m] = (n, parents[n][1] + get_arc_cost(self, n, m))
+
+
+        # remover n da open_list e adiciona-lo à closed_list
+        # porque todos os seus vizinhos foram inspecionados
+        open_list.remove(n)
+        closed_list.add(n)
+
+    print('Path does not exist!')
+    return None
+```
 
 ![alt text](https://github.com/GuiSSMartins/Inteligencia_Artificial_Python/blob/main/AatrExample.gif)
