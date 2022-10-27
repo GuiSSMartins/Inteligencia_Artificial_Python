@@ -41,7 +41,7 @@ class Balde():
     # os estados são representados por "(x,y)" como string, em que x e y representam as quantidades de agua nos jarros
 
     def __init__(self, start="(0,0)", goal="(2,0)", cap1=4, cap2=3):
-        self.g=Grafo(directed=True)
+        self.g=Grafo(directed=True) # é um grafo DIRECIONADO, pois não podemos voltar uma ação para trás
         self.start=start
         self.goal=goal
         self.balde1=cap1   # capacidade do balde 1
