@@ -52,13 +52,17 @@ class Balde():
         # Criar um grafo partindo do estado inicial, com todas as transições posiveis
         estados = []
         estados.append(self.start)
-        visitados = 
+        visitados = []
+        visitados.append(self.start)
         
         while estados != []
             estado = estados.pop()
             expansao = self.expande(estado)
             for e in expansao:
-                self.
+                self.g.add_edge(estado,e,1) # 1 -> custo
+                if e not in visitados:
+                    estados.append(e)
+                    visitados.append(e)
             
             
         for e in self.g.getNodes():
