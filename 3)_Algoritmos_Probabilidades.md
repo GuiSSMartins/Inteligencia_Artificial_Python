@@ -83,8 +83,16 @@ class Balde():
 
     # Devolve o estado resultante de despejar o balde 1 no balde 2
     def despeja12(self, nodo):
-        # To do...
-
+        cap1 = int(nodo[1])
+        cap2 = int(nodo[3]) # 2 é a vírgula, 0 é [ , 4 é ]
+        if cap1 + cap2 <= self.balde2:
+            cap2 = cap1 + cap2
+            cap1 = 0
+        else:
+            falta2 = self.balde2 - cap2
+            cap2 = self.balde2
+            cap1 = cao1 - falta2
+        res = "(" + str(cap1) + "." + str(cap2) +  
 
     # Devolve o estado resultante de despejar o balde 2 no balde 1
     def despeja21(self, nodo):
