@@ -66,7 +66,8 @@ class Balde():
 
     # Devolve o estado resultante de esvaziar o primeiro balde
     def esvazia1(self, nodo):
-        res = "(0," + str
+        res = "(0," + nodo[3] + ")"
+        return res
 
     # Devolve o estado resultante de esvaziar o segundo balde
     def esvazia2(self, nodo):
@@ -84,7 +85,7 @@ class Balde():
     # Devolve o estado resultante de despejar o balde 1 no balde 2
     def despeja12(self, nodo):
         cap1 = int(nodo[1])
-        cap2 = int(nodo[3]) # 2 é a vírgula, 0 é [ , 4 é ]
+        cap2 = int(nodo[3]) # 2 é a vírgula, 0 é ( , 4 é )
         if cap1 + cap2 <= self.balde2:
             cap2 = cap1 + cap2
             cap1 = 0
