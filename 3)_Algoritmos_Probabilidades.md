@@ -54,11 +54,19 @@ class Balde():
 
     # Dado um estado, expande para outros mediante as açoes possiveis
     def expande(self,estado):
-        # To do...
+        lista=[]
+        # ver as capacidades
+        cap1 = int(estado[1])
+        cap2 = int(estado[3]) # vírgula é o 2
+        
+        if cap1 > 0:
+            lista.append()
+        if cap2 > 0:
+            lista.append(self.esvazia2(estado))
 
     # Devolve o estado resultante de esvaziar o primeiro balde
     def esvazia1(self, nodo):
-        # To do...
+        res = "(0," + str
 
     # Devolve o estado resultante de esvaziar o segundo balde
     def esvazia2(self, nodo):
@@ -66,7 +74,7 @@ class Balde():
 
     # Devolve o estado resultante de encher totalmente o primeiro balde da torneira
     def enche1(self, nodo):
-        # To do...
+        res = "(" +  
 
     # Devolve o estado resultante de encher totalmente o segundo balde da torneira
     def enche2(self, nodo):
