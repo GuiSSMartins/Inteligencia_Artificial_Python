@@ -49,9 +49,21 @@ class Balde():
 
     # Partindo do estado inicial, utilizando as ações possíveis como transições construir o grafo
     def cria_grafo(self):
-        # Criar um grafo partindo do estado inicial
-        # com todas as transições posiveis
+        # Criar um grafo partindo do estado inicial, com todas as transições posiveis
+        estados = []
+        estados.append(self.start)
+        visitados = 
         
+        while estados != []
+            estado = estados.pop()
+            expansao = self.expande(estado)
+            for e in expansao:
+                self.
+            
+            
+        for e in self.g.getNodes():
+            self.g.add_heuristica()
+        #
 
     # Dado um estado, expande para outros mediante as açoes possiveis
     def expande(self,estado):
@@ -72,6 +84,8 @@ class Balde():
             lista.append(self.enche1(estado))
         if cap2 < self.balde2:
             lista.append(self.enche2(estado))
+        
+        return lista
 
     # Devolve o estado resultante de esvaziar o primeiro balde
     def esvazia1(self, nodo):
@@ -158,5 +172,9 @@ class main():
 
   problema = Balde()
   problema.cria_grafo()
+  
+  saida = -1
+  
+  problema.solucaoAStar("(0,0)", "(2,0)")
   
   # Tratamos os estados como Strings
