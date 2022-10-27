@@ -50,19 +50,28 @@ class Balde():
     # Partindo do estado inicial, utilizando as ações possíveis como transições construir o grafo
     def cria_grafo(self):
         # Criar um grafo partindo do estado inicial
-        # com todasas transições posiveis
+        # com todas as transições posiveis
+        
 
     # Dado um estado, expande para outros mediante as açoes possiveis
     def expande(self,estado):
         lista=[]
-        # ver as capacidades
+        # ver as capacidades ATUAIS
         cap1 = int(estado[1])
         cap2 = int(estado[3]) # vírgula é o 2
         
         if cap1 > 0:
-            lista.append()
+            lista.append(self.esvazia1(estado))
         if cap2 > 0:
             lista.append(self.esvazia2(estado))
+        if cap1 + cap2 <= self.balde1:
+            lista.append(self.despeja21(estado))
+        if cap1 + cap2 <= self.balde2:
+            lista.append(self.despeja12(estado))
+        if cap1 < self.balde1:
+            lista.append(self.enche1(estado))
+        if cap2 < self.balde2:
+            lista.append(self.enche2(estado))
 
     # Devolve o estado resultante de esvaziar o primeiro balde
     def esvazia1(self, nodo):
