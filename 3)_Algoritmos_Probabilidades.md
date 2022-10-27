@@ -71,16 +71,18 @@ class Balde():
 
     # Devolve o estado resultante de esvaziar o segundo balde
     def esvazia2(self, nodo):
-        # To do...
+        res = "(" + nodo[1] + ",0)"
+        return res
 
     # Devolve o estado resultante de encher totalmente o primeiro balde da torneira
     def enche1(self, nodo):
-        res = "(" +  
+        res = "(" + str(cap1) + "," + nodo[3] + ")"
+        return res
 
     # Devolve o estado resultante de encher totalmente o segundo balde da torneira
     def enche2(self, nodo):
-        # To do...
-
+        res = "(" + nodo[1] + "," + str(cap2) + ")"
+        return res
 
     # Devolve o estado resultante de despejar o balde 1 no balde 2
     def despeja12(self, nodo):
@@ -92,12 +94,23 @@ class Balde():
         else:
             falta2 = self.balde2 - cap2
             cap2 = self.balde2
-            cap1 = cao1 - falta2
-        res = "(" + str(cap1) + "." + str(cap2) +  
+            cap1 = cap1 - falta2
+        res = "(" + str(cap1) + "," + str(cap2) + ")"
+        return res
 
     # Devolve o estado resultante de despejar o balde 2 no balde 1
     def despeja21(self, nodo):
-        # To do...
+        cap1 = int(nodo[1])
+        cap2 = int(nodo[3]) # 2 é a vírgula, 0 é ( , 4 é )
+        if cap1 + cap2 <= self.balde1:
+            cap1 = cap1 + cap2
+            cap2 = 0
+        else:
+            falta1 = self.balde1 - cap1
+            cap1 = self.balde1
+            cap2 = cap2 - falta1
+        res = "(" + str(cap1) + "," + str(cap2) + ")"
+        return res
 
     # Encontra a solução utilizando DFS (recorre à classe grafo e node implementada antes
     def solucaoDFS(self,start,goal):
