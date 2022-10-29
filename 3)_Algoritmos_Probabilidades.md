@@ -1,6 +1,6 @@
-# Ficha 3 - Algoritmos Maximin
+# Ficha 3 - Transformação dos Problemas em GRAFOS
 
-__Maiores dificuldades__: transformar o probelma num GRAFO.
+__Maiores dificuldades__: transformar o problema num GRAFO.
 
 (Resolução Ficha Prática nº3)
 
