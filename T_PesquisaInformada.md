@@ -2,6 +2,7 @@
 ----------------------------------
 
 O que usei para escrever esta explicação:
+- Explicação simles de IA em jogos 2D do _GeeksForGeeks_: https://www.geeksforgeeks.org/a-search-algorithm/
 - Explicação dos métodos em mapas-2D: https://towardsdatascience.com/a-star-a-search-algorithm-eb495fb156bb (... verificar se tem artigo grátis para o ler ...)
 - Implementação A* em python: https://github.com/BaijayantaRoy/Medium-Article/blob/master/A_Star.ipynb
 
@@ -25,3 +26,5 @@ Lendo os textos
 
 - Algortimo por Profundidade:
 - A* (_A star_)
+
+Apesar do A* ser o melhor algoritmo para este caso, não nos podemos esquecer
