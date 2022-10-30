@@ -1,10 +1,10 @@
-# Trabalho Prático 1 - Algoritmos de Pesquisa Informada e Não-Informada
+# Trabalho Prático 1 - Algoritmos de Procura (_Pesquisa Informada e Não-Informada_)
 ----------------------------------
 
 O que usei para escrever esta explicação:
 - Explicação simles de IA em jogos 2D do _GeeksForGeeks_: https://www.geeksforgeeks.org/a-search-algorithm/
 - Explicação dos métodos em mapas-2D: https://towardsdatascience.com/a-star-a-search-algorithm-eb495fb156bb (... verificar se tem artigo grátis para o ler ...)
-- Implementações A* em python: https://github.com/BaijayantaRoy/Medium-Article/blob/master/A_Star.ipynb, https://gist.github.com/ryancollingwood/32446307e976a11a1185a5394d6657bc
+- Implementações A* em python: https://github.com/BaijayantaRoy/Medium-Article/blob/master/A_Star.ipynb, https://gist.github.com/ryancollingwood/32446307e976a11a1185a5394d6657bc, (pseudocódigo) https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2
 
 Neste ponto do trabalho __(1ª parte)__, apenas é necessário:
 - implementar _apenas_ __um__ dos algoritmos de pesquisa informada OU não-informada sobre o mapa (independentemente de este ser o mais eficiente ou não; em princípio, a implementação de vários algoritmos só será feita na 2ª fase);
