@@ -2,9 +2,10 @@
 ----------------------------------
 
 O que usei para escrever esta explicação:
+- Explicação dos métodos em mapas-2D: https://towardsdatascience.com/a-star-a-search-algorithm-eb495fb156bb (... verificar se tem artigo grátis para o ler ...)
 - Implementação A* em python: https://github.com/BaijayantaRoy/Medium-Article/blob/master/A_Star.ipynb
 
-__ATENÇÃO:__ 
+__ATENÇÃO:__ Estes _links_ mostram análises para caos muitos simples, onde os carros andam à mesma velocidade. Neste projeto para IA, os carros
 
 -----------------------------
 
@@ -14,9 +15,11 @@ Como o prof. pediu para
 
 __Jogo__: _VectorRace_ / _RaceTrack_
 
+Apesar de estarmos 
 
 Assim, segundo o que está enunicado no enunciado, não podemos 
 
+Lendo os textos 
 
 ## -> Comparação de Algoritmos _(Qual deles é o mais eficaz para a resolução deste problema?)_
 
