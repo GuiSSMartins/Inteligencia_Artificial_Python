@@ -19,6 +19,22 @@ __ATENÇÃO:__ Estes _links_ mostram análises para caos muitos simples, onde os
 
 __Jogo__: _VectorRace_ / _RaceTrack_
 
+Seguindo a sugestão de mapa feita no enunciado (do ficheiro _circuito.txt_):
+
+__X X X X X X X X X X__
+__X X - - - X X - - X__
+__X - - - - - - - - F__
+__X P - - X X X - - F__
+__X - - - - - - - - F__
+__X X X X - - - - X X__
+__X X X X X X X X X X__
+
+Podemos converter o mapap numa matriz de caracteres, onde:
+- __P__ -> posição inicial do veículo
+- __-__ -> indica local que um veículo pode percorrer
+- __X__ -> obstáculo do caminho (evitar) 
+- __F__ -> meta (como há vários valores de meta final, sem dúvida vai complicar um bocado o algoritmo)
+
 ## -> Comparação de Algoritmos _(Qual deles é o mais eficaz para a resolução deste problema?)_
 
 - Algortimo por Profundidade:
