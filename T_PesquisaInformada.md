@@ -22,11 +22,17 @@ __Jogo__: _VectorRace_ / _RaceTrack_
 Seguindo a sugestão de mapa feita no enunciado (do ficheiro _circuito.txt_):
 
 __X X X X X X X X X X__
+
 __X X - - - X X - - X__
+
 __X - - - - - - - - F__
+
 __X P - - X X X - - F__
+
 __X - - - - - - - - F__
+
 __X X X X - - - - X X__
+
 __X X X X X X X X X X__
 
 Podemos converter o mapap numa matriz de caracteres, onde:
@@ -35,9 +41,23 @@ Podemos converter o mapap numa matriz de caracteres, onde:
 - __X__ -> obstáculo do caminho (evitar) 
 - __F__ -> meta (como há vários valores de meta final, sem dúvida vai complicar um bocado o algoritmo)
 
+Escrever tuplos ('caracter', num travessia). ATENÇÃO: num travessia não é igual a Custo.
+
+Neste mapa, o custo de cada arco deverá ser apenas 1.
+
+Na posição inicial, deve ter valor igual a 1 de 'num travessia'; depois vai-se adicionando uma unidade por cada nova iteração realizad nos novos pontos do mapa.
+
+Aplicar um algirtmo semelhante ao de travessia
+
 ## -> Comparação de Algoritmos _(Qual deles é o mais eficaz para a resolução deste problema?)_
 
 - Algortimo por Profundidade:
 - A* (_A star_):
 
 Apesar do A* ser o melhor algoritmo para este tipo de casos, não podemos esquecer que este não dá garantidamente a melhor solução para o probelma do caminho amis curto em circuitos.
+
+## -> Proposta de Cálculo de uma Aproximação da distância de 
+
+Como o carro pode mover para em cada direção, a melhor _heurística_ é a da __Distância DIAGONAL__. 
+
+APenas se o carro andasse de forma Up, Down, Right, Left, usariamos apenas o de Manhattan.
