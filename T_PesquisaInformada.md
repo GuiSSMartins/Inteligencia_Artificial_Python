@@ -58,6 +58,6 @@ Apesar do A* ser o melhor algoritmo para este tipo de casos, não podemos esquec
 
 ## -> Proposta de Cálculo de uma Aproximação da distância de 
 
-Como o carro pode mover para em cada direção, a melhor _heurística_ é a da __Distância DIAGONAL__. 
+Como o carro pode mover em 8 direções, a melhor _heurística_ h(n) será a da __Distância DIAGONAL__. (para entender melhor, ver o seguinte link (principalmente com as fórmulas mais complicadas para o diagonal Distance): https://www.growingwiththeweb.com/2012/06/a-pathfinding-algorithm.html)
 
 APenas se o carro andasse de forma Up, Down, Right, Left, usariamos apenas o de Manhattan.
