@@ -23,6 +23,7 @@ Estado objetivo: uma das jarras tem de ficar com 2 litros.
 def lerFicheiroMapaMatriz():
     ficheiro = open("circuito.txt")
     linhas = arq.readlines()
+    num_linhas = linhas.size();
     for linha in linhas:
         for 
 
