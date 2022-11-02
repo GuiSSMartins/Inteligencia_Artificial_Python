@@ -222,7 +222,7 @@ def astar(self, start, end):
         custoTotal = math.inf
         for v in open_list:
             (parent, weightParent) = parents[v]
-            custoNodoAtual = weightParent + get_arc_cost(self, parent, v) + self.m_h[n] 
+            custoNodoAtual = weightParent + self.get_arc_cost(self, parent, v) + self.m_h[n] 
             # custo segundo as heuristicas: f(n) = g(n) + h(n)
             if n == None or custoNodoAtual < custoTotal:
                 n = v
@@ -253,7 +253,7 @@ def astar(self, start, end):
             # adiciona-lo à open_list e marcar o antecessor
             if m not in open_list and m not in closed_list:
                 open_list.add(m)
-                parents[m] = (n, parents[n][1] + get_arc_cost(self, n, m))
+                parents[m] = (n, parents[n][1] + self.get_arc_cost(self, n, m))
 
 
         # remover n da open_list e adiciona-lo à closed_list
