@@ -219,7 +219,7 @@ def astar(self, start, end):
         n = None
 
         # encontrar nodo com o menor valor (menor peso + menor heuristica)
-        custoTotal = inf
+        custoTotal = math.inf
         for v in open_list:
             (parent, weightParent) = parents[v]
             custoNodoAtual = weightParent + get_arc_cost(self, parent, v) + self.m_h[n] 
