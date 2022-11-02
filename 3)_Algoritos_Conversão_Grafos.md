@@ -25,6 +25,8 @@ def lerFicheiroMapaMatriz():
     mapa = ficheiro.readlines()
     return mapa
 
+# 2º - 
+def criarGrafoMapa (mapa)
 
 ```
 
