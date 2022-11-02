@@ -69,7 +69,7 @@ class Balde():
         visitados = []
         visitados.append(self.start)
         
-        while estados != []
+        while estados != [] :
             estado = estados.pop()
             expansao = self.expande(estado)
             for e in expansao:
