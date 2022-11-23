@@ -174,3 +174,66 @@ X = Y, Y = 1 ;
 X = 1, Y = 2 ;
 X = 1, Y = 3.
 ```
+N+1 __Não__ é um Incremento.
+
+### Operadores Lógicos
+- , para a conjunção
+- ; para a disjunção
+- not para a negação
+
+```prolog
+% Exemplo
+a.
+b.
+c:-fail. /* origina uma falha */
+d.
+
+% Questões:
+?- a.
+yes
+?- c.
+no
+?- not(a).
+no
+?- not(c).
+yes
+?- a,b.
+yes
+?- a,c.
+no
+?- a;c.
+yes
+?- (a,c);(not(a);b).
+yes
+```
+
+### Operadores Aritméticos e Relacionais (ATENÇÃO: letras MAIUSCULAS - são VARIAVEIS)
+- Adição 				X + Y
+- Subtracção 			X - Y
+- Multiplicação 			X * Y
+- Divisão 				X / Y
+- Divisão inteira 			X // Y
+- Resto da divisão inteira 		X mod Y
+- Potência 				X ^ Y
+- Simétrico 				- X
+
+- Igualdade 		X==Y
+- Diferença 		X\==Y
+- Maior 			X>Y
+- Menor 			X<Y
+- Menor ou igual		X=<Y
+- Maior ou igual 		X >= Y
+
+### Atribuição
+- = para a atribuição simbólica 		X=a (X=Y bidirecional)
+- is para a atribuição numérica 		X is 5  (unidirecional)
+
+__ERRO:__ N is N+1
+
+### Recursividade
+factorial(0,1):-!. % cut - para devolver valor
+
+factorial(N,F):-N1 is N-1,factorial(N1,F1),F is N*F1.
+
+?-factorial(3,F).
+F = 6
