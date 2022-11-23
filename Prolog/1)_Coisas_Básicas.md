@@ -8,7 +8,7 @@ __FACTOS__ : rio(minho). -> Minho é um rio
              
              pai(pedro, raquel). -> Pedro é PAI da Raquel
 
-__REGRAS__ : neto(N,A):- filho(N,P),(descendente(P,A,_); descendente(P,_,A)).  ->  Dizer que "N é neto de A" é o mesmo que dizer que "N é filho de P" e que "P é descendente de A"
+__REGRAS__ : neto(N,A):- filho(N,P),(descendente(P,A,_); descendente(P,_,A)).  ->  Dizer que "N é neto de A" é o mesmo que dizer que "N é filho de P" e que "P é descendente de A e de outra pessoa"
 
 :- -> símbolo das regras (lado direito -> condições da regra)
 
