@@ -1,4 +1,7 @@
 
+### ATENÇÃO: deve-se colocar . (ponto final) em factos e regras
+### Pode-se colocar ; (ponto e vírgula) quando queremos que o programa procure por várias alternativas
+
 __FACTOS__ : rio(minho). -> Minho é um rio
              
              pai(pedro, raquel). -> Pedro é PAI da Raquel
@@ -33,6 +36,31 @@ yes
 
 ?-localizacao(X,portugal),atravessa(R,X).
 X=porto R=douro <cr>
+yes
+
+% E se fossem pedidas alternativas com o ; ?
+
+?-localizacao(X,portugal),atravessa(R,X).
+X=porto R=douro ;
+X=lisboa R=tejo ;
+X=caminha R=minho
+
+?-localizacao(X,portugal);localizacao(X,espanha).
+X=porto <cr>
+yes
+
+% E se fossem pedidas alternativas com o ; ?
+
+?-localizacao(X,portugal);localizacao(X,espanha).
+X=porto ;
+X=lisboa ;
+X=coimbra ;
+X=caminha ;
+X=madrid ;
+X=barcelona ; 
+X=zamora ;
+X=orense ;
+X=toledo
 yes
 ```
 --------------------------------------------
