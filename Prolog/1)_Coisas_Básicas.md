@@ -46,13 +46,13 @@ yes
 X=porto Y=portugal <cr>
 yes
 
-?-localizacao(X,portugal),atravessa(R,X).
+?-localizacao(X,portugal),atravessa(R,X). % , vígula -> conjunção
 X=porto R=douro <cr>
 yes
 
 % E se fossem pedidas alternativas com o ; ?
 
-?-localizacao(X,portugal),atravessa(R,X).
+?-localizacao(X,portugal),atravessa(R,X). % Mostram-se todas as respostas à questão
 X=porto R=douro ;
 X=lisboa R=tejo ;
 X=caminha R=minho
@@ -95,8 +95,29 @@ yes
 filho(X,Y):-homem(X),
 (descendente(X,Y,_);descendente(X,_,Y)).
 
-potência(_,0,1):-!.
+potência(_,0,1):-!. % cut -> quando chegar a esta condição, deve parar a procura
 potência(X,N,P):- N1 is N-1,
                   potência(X,N1,P1),
                   P is X*P1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+a :- b. 
+b :- c. 
+c :- d. 
+
+Resposta paar a questão -a    ->    b.
+
+```
+
+--------------------------------------------
+
+```prolog
+?-rio_português(Rio). %Mostra todas respostas possíveis à questão (Rio -> MAIUSCULAS)
+Rio=douro
+yes
+
+% Na chamada à regra, do lado esquerdo, Rio e R atravessam a ser a mesma variável atravessa(R,C) tem sucesso com R=douro e C=porto
+% A chamada seguinte já é feita com C já instanciada com porto, na prática essa chamada é feita como sendo localizacao(porto,portugal)
+% Quando se atinge o ponto a regra tem sucesso
 ```
