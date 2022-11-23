@@ -1,12 +1,18 @@
 
 ### ATENÇÃO: deve-se colocar . (ponto final) em factos e regras
 ### Pode-se colocar ; (ponto e vírgula) quando queremos que o programa procure por várias alternativas
+### MAIUSCULAS -> X -> Variáveis (podem tomar qualquer valor)
+### Ver sempre as Bases de Conhecimento
 
 __FACTOS__ : rio(minho). -> Minho é um rio
              
              pai(pedro, raquel). -> Pedro é PAI da Raquel
 
 __REGRAS__ : neto(N,A):- filho(N,P),(descendente(P,A,_); descendente(P,_,A)).  ->  Dizer que "N é neto de A" é o mesmo que dizer que "N é filho de P" e que "P é descendente de A"
+
+:- -> símbolo das regras (lado direito -> condições da regra)
+
+; -> disjunção de regras
 
 __QUESTÕES__ : 
 
@@ -44,6 +50,7 @@ yes
 X=porto R=douro ;
 X=lisboa R=tejo ;
 X=caminha R=minho
+yes
 
 ?-localizacao(X,portugal);localizacao(X,espanha).
 X=porto <cr>
@@ -62,5 +69,28 @@ X=zamora ;
 X=orense ;
 X=toledo
 yes
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% not - NEGAÇÃO
+
+?-not(localizacao(porto,portugal)).
+no
+
+?-not(atravessa(mondego,coimbra)).
+yes
+
+
 ```
 --------------------------------------------
+
+### Exemplos de regras
+
+```prolog
+filho(X,Y):-homem(X),
+(descendente(X,Y,_);descendente(X,_,Y)).
+
+potência(_,0,1):-!.
+potência(X,N,P):- N1 is N-1,
+                  potência(X,N1,P1),
+                  P is X*P1.
+```
