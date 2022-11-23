@@ -12,7 +12,11 @@ __REGRAS__ : neto(N,A):- filho(N,P),(descendente(P,A,_); descendente(P,_,A)).  -
 
 :- -> símbolo das regras (lado direito -> condições da regra)
 
-; -> disjunção de regras
+, -> Conjunção (e) de regras
+
+; -> disjunção (ou) de regras (Costuma ser RATOEIRA nos Testes)
+
+
 
 __QUESTÕES__ : 
 
@@ -28,6 +32,8 @@ __QUESTÕES__ :
 
 ---------------------------------------
 ```prolog
+% As respostas vão estar no X (mostra todas respostas quando apresenta o "yes")
+
 ?-localizacao(X,espanha).
 X=madrid <cr>
 yes
