@@ -237,3 +237,69 @@ factorial(N,F):-N1 is N-1,factorial(N1,F1),F is N*F1.
 
 ?-factorial(3,F).
 F = 6
+
+### LISTAS
+lista vazia: []
+
+notação cabeça-cauda: [H|T]
+
+Não têm de ser do memso tipo: [a,2,abc,[x,1,zzz]]
+
+```prolog
+?- [H|T]=[a,b,c,d].
+H = a ,
+T = [b,c,d]
+
+?- [H|T]=[a,b,X].
+H = a ,
+T = [b,X] ,
+X = _
+
+?- [H|T]=[a].
+H = a ,
+T = []
+
+?- [H|T]=[[a,b],3,[d,e]].
+H = [a,b] ,
+T = [3,[d,e]]
+
+?- [H|T]=[].
+no
+```
+### Alteração dinâmica de conhecimento
+dynamic predicado/aridade
+
+- asserta, assertz (acrescentar conhecimento)
+- retract (retirar conhecimento)
+
+```prolog
+:-dynamic figura/2.
+
+figura(hexágono,6).
+
+cria_figuras:- 	assertz(figura(triângulo,3)),
+		asserta(figura(quadrado,4)),
+		assertz(figura(pentagono,5)).
+
+----------------------------------------------
+
+?- figura(F,NL).
+F = hexágono ,
+NL = 6
+
+?- cria_figuras.
+yes
+
+?- figura(F,NL).
+F = quadrado ,
+NL = 4 ;
+
+F = hexágono ,
+NL = 6 ;
+
+F = triângulo ,
+NL = 3 ;
+
+F = pentagono ,
+NL = 5
+```
