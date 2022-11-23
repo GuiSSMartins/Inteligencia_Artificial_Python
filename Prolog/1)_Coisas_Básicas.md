@@ -113,6 +113,9 @@ Resposta paar a questão -a    ->    b.
 --------------------------------------------
 
 ```prolog
+rio_português(R):-atravessa(R,C),localizacao(C,portugal).
+mesmo_rio(C1,C2):-atravessa(R,C1),atravessa(R,C2),C1\==C2.
+
 ?-rio_português(Rio). %Mostra todas respostas possíveis à questão (Rio -> MAIUSCULAS)
 Rio=douro
 yes
@@ -120,4 +123,54 @@ yes
 % Na chamada à regra, do lado esquerdo, Rio e R atravessam a ser a mesma variável atravessa(R,C) tem sucesso com R=douro e C=porto
 % A chamada seguinte já é feita com C já instanciada com porto, na prática essa chamada é feita como sendo localizacao(porto,portugal)
 % Quando se atinge o ponto a regra tem sucesso
+```
+
+-----------------------------------------------
+
+### Predicado _cut_
+
+Quando não é necessário encontrar todas as soluções possíveis pode ser usar o predicado cut: !
+Permite indicar ao prolog objetivos já satisfeitos e que não precisam ser reconsiderados no processo de backtracking
+
+```prolog
+% EXEMPLOS
+
+a1(X, Y) :- b(X), c(Y). 
+
+b(1). 
+b(2). 
+b(3).
+ 
+c(1). 
+c(2). 
+c(3). 
+
+a1(X,Y).
+X = Y, Y = 1 ;
+X = 1, Y = 2 ;
+X = 1, Y = 3 ;
+X = 2, Y = 1 ;
+X = Y, Y = 2 ;
+X = 2, Y = 3 ;
+X = 3, Y = 1 ;
+X = 3, Y = 2 ;
+X = Y, Y = 3.
+
+------------------------
+
+% Quando encontrar uma solução para X, mostra as soluções restantes Y, mas pará depois imediatamente a procura
+a2(X, Y) :- b(X), !, c(Y). 
+
+b(1). 
+b(2). 
+b(3).
+ 
+c(1). 
+c(2). 
+c(3). 
+
+a2(X,Y).
+X = Y, Y = 1 ;
+X = 1, Y = 2 ;
+X = 1, Y = 3.
 ```
